@@ -1,0 +1,665 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T19:07:58.710Z",
+  "title": "Design System: Festolândia Premium Natal Encantado",
+  "extensions": {
+    "colorMeta": {
+      "bordo": {
+        "role": "neutral",
+        "displayName": "Veludo Bordô",
+        "canonical": "oklch(23.8% 0.076 16.0)",
+        "tonalRamp": [
+          "oklch(15% 0.076 16.0)",
+          "oklch(26% 0.076 16.0)",
+          "oklch(38% 0.076 16.0)",
+          "oklch(50% 0.076 16.0)",
+          "oklch(62% 0.076 16.0)",
+          "oklch(74% 0.076 16.0)",
+          "oklch(85% 0.076 16.0)",
+          "oklch(95% 0.076 16.0)"
+        ]
+      },
+      "bordo-fundo": {
+        "role": "neutral",
+        "displayName": "Bordô de Coxia",
+        "canonical": "oklch(19.4% 0.060 14.4)",
+        "tonalRamp": [
+          "oklch(15% 0.060 14.4)",
+          "oklch(26% 0.060 14.4)",
+          "oklch(38% 0.060 14.4)",
+          "oklch(50% 0.060 14.4)",
+          "oklch(62% 0.060 14.4)",
+          "oklch(74% 0.060 14.4)",
+          "oklch(85% 0.060 14.4)",
+          "oklch(95% 0.060 14.4)"
+        ]
+      },
+      "bordo-rodape": {
+        "role": "neutral",
+        "displayName": "Bordô de Rodapé",
+        "canonical": "oklch(17.4% 0.051 12.4)",
+        "tonalRamp": [
+          "oklch(15% 0.051 12.4)",
+          "oklch(26% 0.051 12.4)",
+          "oklch(38% 0.051 12.4)",
+          "oklch(50% 0.051 12.4)",
+          "oklch(62% 0.051 12.4)",
+          "oklch(74% 0.051 12.4)",
+          "oklch(85% 0.051 12.4)",
+          "oklch(95% 0.051 12.4)"
+        ]
+      },
+      "bordo-claro": {
+        "role": "neutral",
+        "displayName": "Bordô de Cortina Clara",
+        "canonical": "oklch(31.9% 0.101 15.4)",
+        "tonalRamp": [
+          "oklch(15% 0.101 15.4)",
+          "oklch(26% 0.101 15.4)",
+          "oklch(38% 0.101 15.4)",
+          "oklch(50% 0.101 15.4)",
+          "oklch(62% 0.101 15.4)",
+          "oklch(74% 0.101 15.4)",
+          "oklch(85% 0.101 15.4)",
+          "oklch(95% 0.101 15.4)"
+        ]
+      },
+      "vermelho": {
+        "role": "secondary",
+        "displayName": "Vermelho Natal",
+        "canonical": "oklch(49.3% 0.186 21.0)",
+        "tonalRamp": [
+          "oklch(15% 0.186 21.0)",
+          "oklch(26% 0.186 21.0)",
+          "oklch(38% 0.186 21.0)",
+          "oklch(50% 0.186 21.0)",
+          "oklch(62% 0.186 21.0)",
+          "oklch(74% 0.186 21.0)",
+          "oklch(85% 0.186 21.0)",
+          "oklch(95% 0.186 21.0)"
+        ]
+      },
+      "vermelho-vivo": {
+        "role": "secondary",
+        "displayName": "Vermelho Vivo",
+        "canonical": "oklch(56.2% 0.199 19.5)",
+        "tonalRamp": [
+          "oklch(15% 0.199 19.5)",
+          "oklch(26% 0.199 19.5)",
+          "oklch(38% 0.199 19.5)",
+          "oklch(50% 0.199 19.5)",
+          "oklch(62% 0.199 19.5)",
+          "oklch(74% 0.199 19.5)",
+          "oklch(85% 0.199 19.5)",
+          "oklch(95% 0.199 19.5)"
+        ]
+      },
+      "verde": {
+        "role": "tertiary",
+        "displayName": "Verde Pinheiro",
+        "canonical": "oklch(31.5% 0.053 165.3)",
+        "tonalRamp": [
+          "oklch(15% 0.053 165.3)",
+          "oklch(26% 0.053 165.3)",
+          "oklch(38% 0.053 165.3)",
+          "oklch(50% 0.053 165.3)",
+          "oklch(62% 0.053 165.3)",
+          "oklch(74% 0.053 165.3)",
+          "oklch(85% 0.053 165.3)",
+          "oklch(95% 0.053 165.3)"
+        ]
+      },
+      "verde-zap": {
+        "role": "tertiary",
+        "displayName": "Verde do WhatsApp escuro",
+        "canonical": "oklch(52.7% 0.137 150.1)",
+        "tonalRamp": [
+          "oklch(15% 0.137 150.1)",
+          "oklch(26% 0.137 150.1)",
+          "oklch(38% 0.137 150.1)",
+          "oklch(50% 0.137 150.1)",
+          "oklch(62% 0.137 150.1)",
+          "oklch(74% 0.137 150.1)",
+          "oklch(85% 0.137 150.1)",
+          "oklch(95% 0.137 150.1)"
+        ]
+      },
+      "dourado": {
+        "role": "primary",
+        "displayName": "Dourado de Enfeite",
+        "canonical": "oklch(78.1% 0.114 85.2)",
+        "tonalRamp": [
+          "oklch(15% 0.114 85.2)",
+          "oklch(26% 0.114 85.2)",
+          "oklch(38% 0.114 85.2)",
+          "oklch(50% 0.114 85.2)",
+          "oklch(62% 0.114 85.2)",
+          "oklch(74% 0.114 85.2)",
+          "oklch(85% 0.114 85.2)",
+          "oklch(95% 0.114 85.2)"
+        ]
+      },
+      "dourado-hover": {
+        "role": "primary",
+        "displayName": "Dourado Aceso",
+        "canonical": "oklch(82.3% 0.105 85.3)",
+        "tonalRamp": [
+          "oklch(15% 0.105 85.3)",
+          "oklch(26% 0.105 85.3)",
+          "oklch(38% 0.105 85.3)",
+          "oklch(50% 0.105 85.3)",
+          "oklch(62% 0.105 85.3)",
+          "oklch(74% 0.105 85.3)",
+          "oklch(85% 0.105 85.3)",
+          "oklch(95% 0.105 85.3)"
+        ]
+      },
+      "dourado-claro": {
+        "role": "primary",
+        "displayName": "Dourado de Luz",
+        "canonical": "oklch(89.8% 0.092 91.3)",
+        "tonalRamp": [
+          "oklch(15% 0.092 91.3)",
+          "oklch(26% 0.092 91.3)",
+          "oklch(38% 0.092 91.3)",
+          "oklch(50% 0.092 91.3)",
+          "oklch(62% 0.092 91.3)",
+          "oklch(74% 0.092 91.3)",
+          "oklch(85% 0.092 91.3)",
+          "oklch(95% 0.092 91.3)"
+        ]
+      },
+      "dourado-escuro": {
+        "role": "primary",
+        "displayName": "Ouro Velho",
+        "canonical": "oklch(66.7% 0.109 79.2)",
+        "tonalRamp": [
+          "oklch(15% 0.109 79.2)",
+          "oklch(26% 0.109 79.2)",
+          "oklch(38% 0.109 79.2)",
+          "oklch(50% 0.109 79.2)",
+          "oklch(62% 0.109 79.2)",
+          "oklch(74% 0.109 79.2)",
+          "oklch(85% 0.109 79.2)",
+          "oklch(95% 0.109 79.2)"
+        ]
+      },
+      "marfim": {
+        "role": "neutral",
+        "displayName": "Marfim de Neve",
+        "canonical": "oklch(98.2% 0.015 77.1)",
+        "tonalRamp": [
+          "oklch(15% 0.015 77.1)",
+          "oklch(26% 0.015 77.1)",
+          "oklch(38% 0.015 77.1)",
+          "oklch(50% 0.015 77.1)",
+          "oklch(62% 0.015 77.1)",
+          "oklch(74% 0.015 77.1)",
+          "oklch(85% 0.015 77.1)",
+          "oklch(95% 0.015 77.1)"
+        ]
+      },
+      "creme": {
+        "role": "neutral",
+        "displayName": "Creme",
+        "canonical": "oklch(94.2% 0.024 73.6)",
+        "tonalRamp": [
+          "oklch(15% 0.024 73.6)",
+          "oklch(26% 0.024 73.6)",
+          "oklch(38% 0.024 73.6)",
+          "oklch(50% 0.024 73.6)",
+          "oklch(62% 0.024 73.6)",
+          "oklch(74% 0.024 73.6)",
+          "oklch(85% 0.024 73.6)",
+          "oklch(95% 0.024 73.6)"
+        ]
+      },
+      "branco": {
+        "role": "neutral",
+        "displayName": "Branco",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(38% 0.000 89.9)",
+          "oklch(50% 0.000 89.9)",
+          "oklch(62% 0.000 89.9)",
+          "oklch(74% 0.000 89.9)",
+          "oklch(85% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "oklch(23.1% 0.034 34.8)",
+        "tonalRamp": [
+          "oklch(15% 0.034 34.8)",
+          "oklch(26% 0.034 34.8)",
+          "oklch(38% 0.034 34.8)",
+          "oklch(50% 0.034 34.8)",
+          "oklch(62% 0.034 34.8)",
+          "oklch(74% 0.034 34.8)",
+          "oklch(85% 0.034 34.8)",
+          "oklch(95% 0.034 34.8)"
+        ]
+      },
+      "texto": {
+        "role": "neutral",
+        "displayName": "Texto",
+        "canonical": "oklch(40.0% 0.043 40.5)",
+        "tonalRamp": [
+          "oklch(15% 0.043 40.5)",
+          "oklch(26% 0.043 40.5)",
+          "oklch(38% 0.043 40.5)",
+          "oklch(50% 0.043 40.5)",
+          "oklch(62% 0.043 40.5)",
+          "oklch(74% 0.043 40.5)",
+          "oklch(85% 0.043 40.5)",
+          "oklch(95% 0.043 40.5)"
+        ]
+      },
+      "fio": {
+        "role": "neutral",
+        "displayName": "Fio",
+        "canonical": "oklch(89.3% 0.036 75.5)",
+        "tonalRamp": [
+          "oklch(15% 0.036 75.5)",
+          "oklch(26% 0.036 75.5)",
+          "oklch(38% 0.036 75.5)",
+          "oklch(50% 0.036 75.5)",
+          "oklch(62% 0.036 75.5)",
+          "oklch(74% 0.036 75.5)",
+          "oklch(85% 0.036 75.5)",
+          "oklch(95% 0.036 75.5)"
+        ]
+      },
+      "fio-campo": {
+        "role": "neutral",
+        "displayName": "Fio de Campo",
+        "canonical": "oklch(85.8% 0.045 75.9)",
+        "tonalRamp": [
+          "oklch(15% 0.045 75.9)",
+          "oklch(26% 0.045 75.9)",
+          "oklch(38% 0.045 75.9)",
+          "oklch(50% 0.045 75.9)",
+          "oklch(62% 0.045 75.9)",
+          "oklch(74% 0.045 75.9)",
+          "oklch(85% 0.045 75.9)",
+          "oklch(95% 0.045 75.9)"
+        ]
+      },
+      "texto-claro": {
+        "role": "neutral",
+        "displayName": "Texto Claro",
+        "canonical": "rgb(255 248 238 / .84)",
+        "tonalRamp": [
+          "oklch(15% 0.015 77.1)",
+          "oklch(26% 0.015 77.1)",
+          "oklch(38% 0.015 77.1)",
+          "oklch(50% 0.015 77.1)",
+          "oklch(62% 0.015 77.1)",
+          "oklch(74% 0.015 77.1)",
+          "oklch(85% 0.015 77.1)",
+          "oklch(95% 0.015 77.1)"
+        ]
+      },
+      "fio-escuro": {
+        "role": "neutral",
+        "displayName": "Fio Escuro",
+        "canonical": "rgb(255 248 238 / .14)",
+        "tonalRamp": [
+          "oklch(15% 0.015 77.1)",
+          "oklch(26% 0.015 77.1)",
+          "oklch(38% 0.015 77.1)",
+          "oklch(50% 0.015 77.1)",
+          "oklch(62% 0.015 77.1)",
+          "oklch(74% 0.015 77.1)",
+          "oklch(85% 0.015 77.1)",
+          "oklch(95% 0.015 77.1)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Só o h1 do hero, três linhas em caixa alta, a última em dourado."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Título de seção em caixa alta, com uma palavra de destaque."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "O 4,8 do selo de avaliações do Google."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nome de serviço, de personagem, número das provas e dos passos, menu do celular."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "h3 do encanto e dos passos, pergunta do FAQ."
+      },
+      "body-lead": {
+        "displayName": "Body lead",
+        "purpose": "Apoio sob o título de seção, até 40em."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto base."
+      },
+      "body-sm": {
+        "displayName": "Body sm",
+        "purpose": "Linha de cartão, resposta do FAQ, texto de avaliação."
+      },
+      "label-botao": {
+        "displayName": "Rótulo de botão",
+        "purpose": "Todo botão, em Montserrat 700."
+      },
+      "label-campo": {
+        "displayName": "Rótulo de campo",
+        "purpose": "Rótulo em cima de cada campo do formulário."
+      },
+      "label-caixa-alta": {
+        "displayName": "Rótulo em caixa alta",
+        "purpose": "Título de coluna do rodapé."
+      }
+    },
+    "shadows": [
+      {
+        "name": "botao-dourado",
+        "value": "0 12px 24px -14px rgb(34 5 10 / .55)",
+        "purpose": "Botão dourado em repouso; no hover, 0 18px 30px -14px rgb(34 5 10 / .7)."
+      },
+      {
+        "name": "cartao-claro",
+        "value": "0 1px 2px rgb(42 6 12 / .05), 0 24px 44px -32px rgb(42 6 12 / .5)",
+        "purpose": "Cartão de personagem; avaliação usa 0 20px 40px -32px rgb(42 6 12 / .45)."
+      },
+      {
+        "name": "cartao-bordo",
+        "value": "0 22px 44px -30px rgb(42 6 12 / .7)",
+        "purpose": "Cartões de serviço; no hover, 0 32px 54px -30px rgb(42 6 12 / .85)."
+      },
+      {
+        "name": "faixa-provas",
+        "value": "0 30px 60px -34px rgb(42 6 12 / .55), 0 2px 0 rgb(255 255 255 / .8) inset",
+        "purpose": "O cartão de provas que sobe por cima do pé do hero."
+      },
+      {
+        "name": "selo-nota",
+        "value": "0 30px 60px -36px rgb(42 6 12 / .8)",
+        "purpose": "O selo bordô da nota do Google."
+      },
+      {
+        "name": "foto-no-escuro",
+        "value": "0 40px 70px -40px rgb(0 0 0 / .8)",
+        "purpose": "Foto do encanto e do orçamento sobre fundo escuro."
+      },
+      {
+        "name": "cartao-formulario",
+        "value": "0 40px 80px -40px rgb(0 0 0 / .85)",
+        "purpose": "Cartão marfim do formulário sobre a cortina."
+      },
+      {
+        "name": "galeria",
+        "value": "0 24px 40px -26px rgb(0 0 0 / .8)",
+        "purpose": "Fotos da faixa da galeria."
+      },
+      {
+        "name": "anel-passo",
+        "value": "0 0 0 8px #FFF8EE, 0 16px 30px -18px rgb(184 140 62 / .9)",
+        "purpose": "Número do passo: o anel marfim recorta o fio pontilhado e o brilho dourado assenta embaixo."
+      },
+      {
+        "name": "zap-flutuante",
+        "value": "0 16px 30px -12px rgb(0 0 0 / .5), 0 0 0 4px rgb(255 248 238 / .9)",
+        "purpose": "Botão flutuante do WhatsApp com anel marfim."
+      },
+      {
+        "name": "topo-rolado",
+        "value": "0 1px 0 rgb(217 178 92 / .18), 0 14px 30px -18px rgb(0 0 0 / .6)",
+        "purpose": "Topo depois que a página sai do começo: fio dourado e sombra."
+      },
+      {
+        "name": "foco-campo",
+        "value": "0 0 0 4px rgb(179 23 47 / .14)",
+        "purpose": "Halo de foco do campo, com a borda vermelha."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Entradas do hero, hover de botão e cartão, abertura do FAQ."
+      },
+      {
+        "name": "ease-suave",
+        "value": "cubic-bezier(.22, .9, .24, 1)",
+        "purpose": "Revelação no scroll."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(.65, 0, .35, 1)",
+        "purpose": "Balanço das bolas e desenho do fio dos passos."
+      },
+      {
+        "name": "revela",
+        "value": "sobe 28px com opacidade, .95s ease-suave, 90ms entre irmãos",
+        "purpose": "Elemento com data-revela ao entrar na tela (limiar de 12%)."
+      },
+      {
+        "name": "revela-lista",
+        "value": "sobe 36px, giro de -2deg, scale(.96), .9s ease-suave, 80ms entre itens",
+        "purpose": "Filhos de lista com data-revela-lista."
+      },
+      {
+        "name": "hover-botao",
+        "value": "translateY(-2px) em .4s ease-out; active scale(.97) em .1s",
+        "purpose": "Todos os botões, só com hover: hover."
+      },
+      {
+        "name": "hover-cartao",
+        "value": "translateY(-5px a -6px) em .55s ease-out; foto scale(1.06 a 1.07) em 1s a 1.1s",
+        "purpose": "Cartões de serviço e de personagem (este inclina 1,6 grau, alternando o lado)."
+      },
+      {
+        "name": "hero-lcp",
+        "value": "noel-chega: translateY(46px) scale(.97), 1.25s ease-out a .22s; fundo-assenta: scale(1.07), 2.6s",
+        "purpose": "Papai Noel e cortina são o LCP: entram só por transform, nunca por opacidade."
+      },
+      {
+        "name": "loops",
+        "value": "neve 11s e 16s linear; balanço 3.6s e 4.4s; estrelinha 3.2s; chama 3.4s; galeria 70s linear",
+        "purpose": "Movimento de cena, só transform e opacity, parado com movimento reduzido."
+      },
+      {
+        "name": "reduzir-movimento",
+        "value": "animation e transition em .01ms, scroll-behavior auto, nada escondido",
+        "purpose": "prefers-reduced-motion: reduce. A galeria vira rolagem lateral com snap."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "cel-estreito",
+        "value": "max-width: 22.5em (360px)"
+      },
+      {
+        "name": "cel-medio",
+        "value": "max-width: 25em (400px)"
+      },
+      {
+        "name": "celular",
+        "value": "max-width: 39.99em (abaixo de 640px)"
+      },
+      {
+        "name": "fundo-desk",
+        "value": "min-width: 48em (768px), troca da foto de fundo do hero"
+      },
+      {
+        "name": "tablet",
+        "value": "max-width: 63.99em (abaixo de 1024px), uma coluna e hero na ordem do celular"
+      },
+      {
+        "name": "menu",
+        "value": "max-width: 68.74em (abaixo de 1100px), menu em tela cheia"
+      },
+      {
+        "name": "desk-medio",
+        "value": "max-width: 79.99em (abaixo de 1280px), alturas de content-visibility"
+      },
+      {
+        "name": "tela-larga",
+        "value": "min-width: 120.0625em (acima de 1920px), raiz em .83333vw"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão dourado",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A ação de reserva: pílula dourada com texto tinta e ícone do WhatsApp.",
+      "html": "<a class=\"ds-btn-dourado\" href=\"#\"><svg viewBox=\"0 0 256 256\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M152.58,145.23l23,11.48A24,24,0,0,1,152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155ZM232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-40,24a8,8,0,0,0-4.42-7.16l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88A40,40,0,0,0,192,152Z\"/></svg>Reservar meu Natal</a>",
+      "css": ".ds-btn-dourado{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border:2px solid transparent;border-radius:999px;font:700 15.5px/1.15 'Montserrat', system-ui, sans-serif;letter-spacing:.01em;white-space:nowrap;cursor:pointer;text-decoration:none;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s cubic-bezier(.16,1,.3,1),background-color .25s ease,border-color .25s ease,color .25s ease;background:var(--dourado,#D9B25C);color:var(--tinta,#2B1712);box-shadow:0 12px 24px -14px rgb(34 5 10 / .55)}.ds-btn-dourado:hover{transform:translateY(-2px);background:#E4C072;box-shadow:0 18px 30px -14px rgb(34 5 10 / .7)}.ds-btn-dourado:focus-visible{outline:2px solid var(--dourado-claro,#F4DC96);outline-offset:3px}.ds-btn-dourado:active{transform:scale(.97);transition-duration:.1s}"
+    },
+    {
+      "name": "Botão contorno claro",
+      "kind": "button",
+      "refersTo": "button-outline-light",
+      "description": "Ação secundária sobre o escuro (hero).",
+      "html": "<div class=\"ds-palco\"><a class=\"ds-btn-contorno\" href=\"#\">Conhecer o elenco</a></div>",
+      "css": ".ds-palco{padding:24px;background:var(--bordo-fundo,#2A060C);border-radius:22px}.ds-btn-contorno{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border:2px solid transparent;border-radius:999px;font:700 15.5px/1.15 'Montserrat', system-ui, sans-serif;letter-spacing:.01em;white-space:nowrap;cursor:pointer;text-decoration:none;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s cubic-bezier(.16,1,.3,1),background-color .25s ease,border-color .25s ease,color .25s ease;border-color:rgb(255 248 238 / .75);color:var(--marfim,#FFF8EE);background:rgb(42 6 12 / .28)}.ds-btn-contorno:hover{border-color:var(--marfim,#FFF8EE);background:rgb(255 248 238 / .1);transform:translateY(-2px)}.ds-btn-contorno:focus-visible{outline:2px solid var(--dourado-claro,#F4DC96);outline-offset:3px}.ds-btn-contorno:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Botão contorno vermelho",
+      "kind": "button",
+      "refersTo": "button-outline-red",
+      "description": "Ação do personagem no claro (\"Quero este\"), tamanho pequeno.",
+      "html": "<a class=\"ds-btn-vermelho\" href=\"#\"><svg viewBox=\"0 0 256 256\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M152.58,145.23l23,11.48A24,24,0,0,1,152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155ZM232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-40,24a8,8,0,0,0-4.42-7.16l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88A40,40,0,0,0,192,152Z\"/></svg>Quero este</a>",
+      "css": ".ds-btn-vermelho{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border:2px solid transparent;border-radius:999px;font:700 15.5px/1.15 'Montserrat', system-ui, sans-serif;letter-spacing:.01em;white-space:nowrap;cursor:pointer;text-decoration:none;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s cubic-bezier(.16,1,.3,1),background-color .25s ease,border-color .25s ease,color .25s ease;min-height:44px;padding:0 18px;gap:8px;font-size:14px;border-color:var(--vermelho,#B3172F);color:var(--vermelho,#B3172F);background:transparent}.ds-btn-vermelho svg{width:18px;height:18px}.ds-btn-vermelho:hover{background:var(--vermelho,#B3172F);color:var(--marfim,#FFF8EE);transform:translateY(-2px)}.ds-btn-vermelho:focus-visible{outline:2px solid var(--vermelho,#B3172F);outline-offset:3px}.ds-btn-vermelho:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Cabeçalho com filete",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Filete dourado com a estrelinha da logo, título Lilita caixa alta com uma palavra de destaque. Só em quatro seções.",
+      "html": "<header class=\"ds-cab\"><span class=\"ds-filete\"><svg viewBox=\"0 0 256 256\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M208,144a15.78,15.78,0,0,1-10.42,14.94L146,178l-19,51.62a15.92,15.92,0,0,1-29.88,0L78,178l-51.62-19a15.92,15.92,0,0,1,0-29.88L78,110l19-51.62a15.92,15.92,0,0,1,29.88,0L146,110l51.62,19A15.78,15.78,0,0,1,208,144ZM152,48h16V64a8,8,0,0,0,16,0V48h16a8,8,0,0,0,0-16H184V16a8,8,0,0,0-16,0V32H152a8,8,0,0,0,0,16Zm88,32h-8V72a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0V96h8a8,8,0,0,0,0-16Z\"/></svg></span><h2 class=\"ds-titulo\">Onde o Natal <span class=\"ds-destaque\">acontece</span></h2><p class=\"ds-apoio\">Da sala de casa na noite de 24 ao shopping lotado em dezembro.</p></header>",
+      "css": ".ds-cab{display:grid;justify-items:center;gap:14px;text-align:center;padding:32px 16px;background:var(--creme,#F6EADB)}.ds-filete{display:flex;align-items:center;gap:12px;color:var(--dourado-escuro,#B88C3E)}.ds-filete::before,.ds-filete::after{content:'';width:56px;height:1.5px;background:linear-gradient(90deg,transparent,currentColor)}.ds-filete::after{transform:scaleX(-1)}.ds-titulo{margin:0;color:var(--bordo,#3B0A12);font:400 clamp(34px,2.4vw + 18px,60px)/1.02 'Lilita One', 'Arial Black', sans-serif;letter-spacing:.004em;text-transform:uppercase;text-wrap:balance}.ds-destaque{color:var(--vermelho,#B3172F)}.ds-apoio{margin:0;max-width:40em;color:var(--texto,#5C4036);font:400 17px/1.65 'Montserrat', system-ui, sans-serif}"
+    },
+    {
+      "name": "Cartão de personagem",
+      "kind": "card",
+      "refersTo": "card-personagem",
+      "description": "Programa de teatro: foto 3:4 em passe-partout branco, nome em Lilita, linha curta.",
+      "html": "<article class=\"ds-pers\"><span class=\"ds-pers-foto\"></span><div class=\"ds-pers-corpo\"><h3 class=\"ds-pers-nome\">Papai Noel Imperial</h3><p class=\"ds-pers-linha\">Manto marfim com bordado dourado e lanterna acesa.</p></div></article>",
+      "css": ".ds-pers{display:flex;flex-direction:column;width:260px;padding:10px 10px 18px;border:1px solid rgb(217 178 92 / .5);border-radius:22px;background:#fff;box-shadow:0 1px 2px rgb(42 6 12 / .05),0 24px 44px -32px rgb(42 6 12 / .5);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .3s ease}.ds-pers:hover{transform:translateY(-6px) rotate(-1.6deg);border-color:var(--dourado,#D9B25C);box-shadow:0 1px 2px rgb(42 6 12 / .05),0 34px 54px -30px rgb(42 6 12 / .6)}.ds-pers-foto{display:block;aspect-ratio:3/4;border-radius:14px;background:linear-gradient(160deg,#5B1521,#2A060C)}.ds-pers-corpo{display:grid;gap:6px;padding:16px 8px 0}.ds-pers-nome{margin:0;color:var(--bordo,#3B0A12);font:400 22px/1.08 'Lilita One', 'Arial Black', sans-serif;text-transform:uppercase;letter-spacing:.01em}.ds-pers-linha{margin:0;color:var(--texto,#5C4036);font:400 14px/1.5 'Montserrat', system-ui, sans-serif}"
+    },
+    {
+      "name": "Campo de formulário",
+      "kind": "input",
+      "refersTo": "campo",
+      "description": "Rótulo em cima, campo branco de 12 px, foco vermelho com halo, erro em fundo rosado.",
+      "html": "<div class=\"ds-campo\"><label for=\"ds-nome\">Seu nome</label><input id=\"ds-nome\" type=\"text\" placeholder=\"Maria Souza\"></div>",
+      "css": ".ds-campo{display:grid;gap:6px;max-width:320px;font-family:'Montserrat', system-ui, sans-serif}.ds-campo label{color:var(--bordo,#3B0A12);font-size:13.5px;font-weight:700}.ds-campo input{width:100%;min-height:50px;padding:12px 14px;border:1.5px solid #E2CDB0;border-radius:12px;background:#fff;color:var(--tinta,#2B1712);font:500 15.5px 'Montserrat', system-ui, sans-serif;transition:border-color .2s ease,box-shadow .2s ease}.ds-campo input::placeholder{color:#8A6E62;opacity:1}.ds-campo input:focus{outline:none;border-color:var(--vermelho,#B3172F);box-shadow:0 0 0 4px rgb(179 23 47 / .14)}.ds-campo input[aria-invalid='true']{border-color:var(--vermelho,#B3172F);background:#FFF4F4}"
+    },
+    {
+      "name": "Chips de escolha",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pílulas de escolha múltipla no formulário; selecionada vira vermelha.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Papai Noel</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Mamãe Noel</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Duendes músicos</span></label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;font-family:'Montserrat', system-ui, sans-serif}.ds-chip{position:relative;cursor:pointer}.ds-chip input{position:absolute;inset:0;margin:0;opacity:0;cursor:pointer}.ds-chip span{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1.5px solid #E2CDB0;border-radius:999px;background:#fff;color:var(--tinta,#2B1712);font-size:13.5px;font-weight:600;transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .3s cubic-bezier(.16,1,.3,1)}.ds-chip:hover span{border-color:var(--vermelho,#B3172F)}.ds-chip input:checked + span{border-color:var(--vermelho,#B3172F);background:var(--vermelho,#B3172F);color:var(--marfim,#FFF8EE)}.ds-chip input:focus-visible + span{outline:2px solid var(--vermelho,#B3172F);outline-offset:3px}.ds-chip:active span{transform:scale(.96)}"
+    },
+    {
+      "name": "Item do FAQ",
+      "kind": "custom",
+      "refersTo": "faq-item",
+      "description": "Acordeão: item marfim de 18 px; aberto fica branco com fio dourado e o mais vira menos.",
+      "html": "<div class=\"ds-faq ds-aberto\"><button class=\"ds-faq-botao\" aria-expanded=\"true\">Como funciona a reserva?<span class=\"ds-faq-mais\"></span></button><div class=\"ds-faq-resposta\"><div><p>Você manda a data e o elenco no WhatsApp e recebe a proposta no mesmo dia.</p></div></div></div>",
+      "css": ".ds-faq{max-width:520px;border:1px solid #EAD9C2;border-radius:18px;background:var(--marfim,#FFF8EE);font-family:'Montserrat', system-ui, sans-serif;transition:border-color .3s ease,box-shadow .4s cubic-bezier(.16,1,.3,1),background-color .3s ease}.ds-faq.ds-aberto{border-color:rgb(217 178 92 / .7);background:#fff;box-shadow:0 20px 36px -28px rgb(42 6 12 / .5)}.ds-faq-botao{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;min-height:64px;padding:16px 20px 16px 22px;border:0;background:none;color:var(--bordo,#3B0A12);font:700 16px/1.35 'Montserrat', system-ui, sans-serif;text-align:left;cursor:pointer}.ds-faq-botao:focus-visible{outline:2px solid var(--vermelho,#B3172F);outline-offset:3px;border-radius:6px}.ds-faq-mais{position:relative;flex:none;width:32px;height:32px;border-radius:50%;background:var(--creme,#F6EADB);transition:background-color .3s ease,transform .5s cubic-bezier(.16,1,.3,1)}.ds-faq-mais::before,.ds-faq-mais::after{content:'';position:absolute;top:50%;left:50%;width:12px;height:2px;margin:-1px 0 0 -6px;border-radius:2px;background:var(--vermelho,#B3172F);transition:transform .5s cubic-bezier(.16,1,.3,1),background-color .3s ease}.ds-faq-mais::after{transform:rotate(90deg)}.ds-faq-botao:hover .ds-faq-mais{background:#EFDCC2}.ds-aberto .ds-faq-mais{background:var(--vermelho,#B3172F);transform:rotate(180deg)}.ds-aberto .ds-faq-botao:hover .ds-faq-mais{background:var(--vermelho-vivo,#D02A42)}.ds-aberto .ds-faq-mais::before,.ds-aberto .ds-faq-mais::after{background:var(--marfim,#FFF8EE)}.ds-aberto .ds-faq-mais::after{transform:rotate(0deg)}.ds-faq-resposta{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.16,1,.3,1)}.ds-aberto .ds-faq-resposta{grid-template-rows:1fr}.ds-faq-resposta>div{overflow:hidden}.ds-faq-resposta p{margin:0;padding:0 22px 20px;color:var(--texto,#5C4036);font-size:15px;line-height:1.65}"
+    },
+    {
+      "name": "Topo rolado",
+      "kind": "nav",
+      "refersTo": "label-botao",
+      "description": "Topo depois do hero: bordô chapado a 96%, links marfim com sublinhado dourado que se desenha da esquerda.",
+      "html": "<nav class=\"ds-topo\"><span class=\"ds-topo-marca\">Festolândia</span><ul class=\"ds-topo-links\"><li><a href=\"#\">Onde atendemos</a></li><li><a href=\"#\">Elenco</a></li><li><a href=\"#\">Como funciona</a></li><li><a href=\"#\">Galeria</a></li></ul></nav>",
+      "css": ".ds-topo{display:flex;align-items:center;gap:28px;height:78px;padding:0 24px;background:rgb(42 6 12 / .96);box-shadow:0 1px 0 rgb(217 178 92 / .18),0 14px 30px -18px rgb(0 0 0 / .6);color:var(--marfim,#FFF8EE)}.ds-topo-marca{color:var(--dourado,#D9B25C);font:400 24px/1 'Lilita One', 'Arial Black', sans-serif}.ds-topo-links{display:flex;gap:28px;margin:0 0 0 auto;padding:0;list-style:none}.ds-topo-links a{position:relative;display:block;padding:10px 0;color:rgb(255 248 238 / .88);font:600 14.5px/1.2 'Montserrat', system-ui, sans-serif;text-decoration:none;transition:color .25s ease}.ds-topo-links a::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:2px;border-radius:2px;background:var(--dourado,#D9B25C);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.16,1,.3,1)}.ds-topo-links a:hover{color:var(--marfim,#FFF8EE)}.ds-topo-links a:hover::after{transform:scaleX(1)}.ds-topo-links a:focus-visible{outline:2px solid var(--dourado-claro,#F4DC96);outline-offset:3px;border-radius:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Palco de Veludo",
+    "overview": "A página é uma noite de teatro de Natal. Abre com a cortina de veludo bordô em tela cheia, neve caindo e o Papai Noel Imperial de lanterna acesa, e fecha na mesma cortina, mais escura, no orçamento. No meio, o palco acende e apaga: fundos marfim e creme para ler, bordô e verde pinheiro para os momentos de luz baixa, sempre com uma luz de palco (gradiente radial dourado ou marfim) pousando no alto da seção. Quem segura a cena é o elenco real em foto. Não há ilustração, clip-art nem ícone no lugar de pessoa.\n\nA densidade é de landing page de venda: seções altas com respiro (72 a 120 px de padding vertical), um cabeçalho centrado por seção e um único gesto de composição em cada uma (bento de fotos, faixa de cartões, lista em duas colunas, linha de passos, faixa contínua de fotos). O dourado é enfeite e botão, não texto no claro. O vermelho é a voz do destaque no claro. A estrelinha de quatro pontas da logo é a assinatura, usada com parcimônia.\n\nDivergência registrada: o comentário de `05-encanto.css` chama o encanto de \"a única seção escura no meio\", mas a galeria também é escura (bordô). O build vale: há duas pausas escuras no meio, uma verde e uma bordô.",
+    "keyCharacteristics": [
+      "Palco que abre e fecha na mesma cortina bordô (hero e orçamento usam a mesma foto de fundo).",
+      "Fundos alternando claro e escuro, com luz de palco em gradiente radial no topo das seções.",
+      "Títulos em Lilita One caixa alta com uma palavra de destaque; texto em Montserrat.",
+      "Botão em pílula dourada com texto tinta; cartões de 22 px com foto real.",
+      "Movimento de cena: neve, bolas balançando, lanterna piscando como chama, tudo só em `transform` e `opacity`."
+    ],
+    "rules": [
+      {
+        "name": "A Regra do Dourado Calado",
+        "body": "Dourado nunca é texto em fundo claro (1,90:1). No claro, o destaque é o vermelho; o dourado entra como preenchimento de botão com texto tinta, como filete decorativo ou como ícone e texto no escuro.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Troca de Papéis",
+        "body": "Seção escura não pinta cor por cor: a classe de seção escura troca os papéis (`--cor-titulo` vira marfim, `--cor-texto` vira texto-claro, `--cor-destaque` e `--cor-icone` viram dourado, `--cor-foco` vira dourado-claro) e o cabeçalho, o apoio e o foco seguem sozinhos.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Verde Que Passa",
+        "body": "O `#25D366` com ícone branco dá 1,98:1 e reprova. O botão flutuante usa o verde-zap.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Palavra Acesa",
+        "body": "Todo título de seção tem uma palavra ou trecho de destaque, e só um: vermelho no claro, dourado no escuro. Ex.: \"Onde o Natal *acontece*\", \"Uma *só*\".",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Letreiro",
+        "body": "Lilita One só em caixa alta e só em peso 400. Nada de Lilita em parágrafo, rótulo ou botão; botão é Montserrat 700.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Sombra Quente",
+        "body": "Sombra no claro é sempre bordô com espalhamento negativo; nunca `rgb(0 0 0)` sobre marfim ou creme.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra da Luz de Palco",
+        "body": "Seção escura ganha luz por gradiente radial dourado (12% a 22%) num canto ou no alto; seção clara, quando ganha luz, é o foco marfim do elenco. Luz é fundo, nunca camada animada.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** usar o botão dourado com texto tinta (8,49:1) para toda ação de reserva, e o contorno vermelho para a ação secundária no claro.",
+      "**Do** dar a cada título de seção exatamente uma palavra de destaque: vermelho no claro, dourado no escuro.",
+      "**Do** manter o raio de 22 px em todo cartão e foto solta, 14 px na foto dentro de cartão, 12 px no campo e pílula no botão e no chip.",
+      "**Do** alternar marfim e creme no claro e reservar o escuro para bordô de veludo e verde pinheiro, sempre com luz de palco em gradiente radial.",
+      "**Do** manter o Papai Noel e a cortina do hero visíveis desde o primeiro quadro: eles entram só por `transform` (`noel-chega` e `fundo-assenta`), nunca por opacidade. São o LCP; imagem com opacidade zero não conta como pintada e o LCP espera a animação.",
+      "**Do** animar só `transform` e `opacity` em entradas e loops (a neve anda em `translate3d`, o fio dos passos em `scaleX` e `scaleY`), e esconder elemento parado só com opacidade.",
+      "**Do** manter no `99-desempenho.css` o `content-visibility: auto` nas seções abaixo do hero com `contain-intrinsic-size` medido pelo `scripts/alturas.mjs` em 1440, 1100, 800 e 390. A altura é só do conteúdo, sem o padding da seção. Mudou muito o tamanho de uma seção, medir de novo.",
+      "**Do** montar o formulário a partir do `<template>` quando a seção chega a 900 px da tela (ou no clique em `#orcamento`), guardando a altura do lugar com `--reserva` (640 px, 900 px no celular).",
+      "**Do** marcar imagem decorativa do hero com `data-adiar` (as bolas): ela só baixa depois do LCP e do carregamento, com limite de 1,5 s, e entra com fade de `.6s`.",
+      "**Do** escrever CSS em `px` e deixar o build converter em `rem`; acima de 1920 px a raiz escala a página inteira.",
+      "**Do** dar à seção logo abaixo do hero, no celular, `content-visibility: hidden` até a primeira pintura (classe `js-abrindo` no `<head>`, que sai na primeira pintura ou em 2,5 s)."
+    ],
+    "donts": [
+      "**Don't** usar dourado como texto em fundo claro (1,90:1 no marfim) nem o ouro velho como texto (2,90:1).",
+      "**Don't** usar o `#25D366` com branco no botão do WhatsApp (1,98:1).",
+      "**Don't** pôr o filete com a estrelinha em todo título: ele fica nos quatro cabeçalhos onde está (serviços, encanto, galeria, orçamento). A raridade é o que faz dele assinatura.",
+      "**Don't** fazer grade de cartões só com ícone: serviço e personagem levam foto real.",
+      "**Don't** trazer balão, confete ou cor saturada de festa infantil para a paleta (PRODUCT.md).",
+      "**Don't** aplicar `backdrop-filter` no topo ou em superfície de fundo liso; o topo rolado é bordô chapado a 96%.",
+      "**Don't** esconder elemento parado com `clip-path` antes da revelação: o IntersectionObserver não dispara.",
+      "**Don't** usar a propriedade `zoom` para tela larga; a escala vem da raiz em `rem`.",
+      "**Don't** colocar sombra preta sobre fundo claro; sombra no claro é bordô com espalhamento negativo.",
+      "**Don't** usar Lilita One fora da caixa alta ou em texto corrido."
+    ]
+  }
+}

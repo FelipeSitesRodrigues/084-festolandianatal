@@ -1,0 +1,60 @@
+{
+  "itens": [
+    {
+      "id": "classico",
+      "nome": "Papai Noel Clássico",
+      "linha": "O de vermelho e branco, do jeito que a criança desenha na cartinha.",
+      "mensagem": "o *Papai Noel Clássico*",
+      "foto": "el-classico",
+      "alt": "Papai Noel clássico de roupa vermelha sentado em uma poltrona"
+    },
+    {
+      "id": "imperial",
+      "nome": "Papai Noel Imperial",
+      "linha": "Manto marfim com bordado dourado e lanterna na mão. O Papai Noel de livro antigo.",
+      "mensagem": "o *Papai Noel Imperial*",
+      "foto": "el-imperial",
+      "alt": "Papai Noel de manto marfim e dourado segurando uma lanterna acesa"
+    },
+    {
+      "id": "mamae",
+      "nome": "Mamãe Noel",
+      "linha": "Chega junto ou sozinha, de avental bordado e com carinho de avó.",
+      "mensagem": "a *Mamãe Noel*",
+      "foto": "el-mamae",
+      "alt": "Mamãe Noel de avental bordado acenando ao lado da árvore de Natal"
+    },
+    {
+      "id": "duendes",
+      "nome": "Duendes músicos",
+      "linha": "Violino ao vivo, dança e muita brincadeira com as crianças.",
+      "mensagem": "os *duendes músicos*",
+      "foto": "el-duendes",
+      "alt": "Duende tocando violino e duenda pedindo silêncio em uma escada"
+    },
+    {
+      "id": "noeletes",
+      "nome": "Noeletes",
+      "linha": "As ajudantes do Papai Noel, que animam, organizam a fila e fazem a festa andar.",
+      "mensagem": "as *Noeletes*",
+      "foto": "el-noeletes",
+      "alt": "Duas Noeletes de vestido vermelho e dourado sorrindo em um cenário de Natal"
+    },
+    {
+      "id": "quebra-nozes",
+      "nome": "Soldadinho e Bailarina",
+      "linha": "A dupla do Quebra-Nozes, pra quem quer um Natal com cara de espetáculo.",
+      "mensagem": "o *Soldadinho e a Bailarina*",
+      "foto": "el-quebra-nozes",
+      "alt": "Soldadinho de casaca vermelha ajoelhado diante da Bailarina do Quebra-Nozes"
+    },
+    {
+      "id": "personagens",
+      "nome": "Personagens em clima de Natal",
+      "linha": "Grinch, Stitch, Mickey e Minnie com roupa natalina, pra quem quer o personagem favorito na festa.",
+      "mensagem": "*personagens em versão de Natal*",
+      "foto": "el-personagens",
+      "alt": "Personagem azul de pelúcia vestido de Papai Noel em um palco com cortina vermelha"
+    }
+  ]
+}

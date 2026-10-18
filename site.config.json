@@ -1,0 +1,36 @@
+{
+  "nome": "Festolândia Premium Natal Encantado",
+  "nomeCurto": "Festolândia Natal Encantado",
+  "empresa": "Festolândia Shows e Eventos",
+  "dominio": "",
+  "whatsapp": "5511965358929",
+  "whatsappTexto": "(11) 96535-8929",
+  "telefones": ["(11) 99993-2583", "(11) 96671-4197", "(11) 2365-5475"],
+  "email": "showsfestolandia@gmail.com",
+  "endereco": "Rua Augusta, 101, Consolação",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "cep": "",
+  "horario": "Segunda a sábado, das 9h às 20h",
+  "instagram": "@festolandiashows",
+  "instagramUrl": "https://www.instagram.com/festolandiashows/",
+  "googleNota": "4,8",
+  "googleAvaliacoes": 113,
+  "mensagens": {
+    "geral": "Olá! Vim pelo site do Natal Encantado e gostaria de reservar o Papai Noel.",
+    "elenco": "Olá! Vim pelo site do Natal Encantado e quero montar o elenco da minha festa de Natal.",
+    "servico": "Olá! Vim pelo site do Natal Encantado e gostaria de um orçamento para {servico}.",
+    "personagem": "Olá! Vim pelo site do Natal Encantado e gostaria de um orçamento para {servico}."
+  },
+  "pendencias": [
+    "Sabrina confirmar quais Papais Noéis têm barba natural (FAQ responde sem prometer)",
+    "tempo da visita e do espetáculo (FAQ responde que vai na proposta)",
+    "preço e regra da noite de 24 e 25",
+    "início da temporada para empresa e shopping",
+    "sinal, formas de pagamento e remarcação (FAQ responde que vai na proposta)",
+    "raio de atendimento e taxa de deslocamento",
+    "domínio do site novo (sem ele: sem canonical, sem sitemap e og:image relativo)",
+    "avaliação de cliente de Natal (os depoimentos são do Google da Festolândia, sem ser de Natal)",
+    "política de privacidade do formulário"
+  ]
+}

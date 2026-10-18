@@ -1,0 +1,115 @@
+/* ---------------------------------------------------------------- topo
+   Transparente em cima do hero; quando a página sai do começo (_base.js, sentinela) vira
+   bordô quase opaco, sem desfoque (backdrop-filter em fundo liso é custo sem efeito,
+   memória do 02-nubank). Menu numa linha só a partir de 1100 px; abaixo, o botão abre o
+   menu em tela cheia.                                                                  */
+.topo {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  color: var(--marfim);
+  transition: background-color .45s ease, box-shadow .45s ease, transform .5s var(--ease-out);
+}
+.topo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgb(34 5 10 / .72), rgb(34 5 10 / 0));
+  transition: opacity .45s ease;
+}
+.topo--rolado { background: rgb(42 6 12 / .96); box-shadow: 0 1px 0 rgb(217 178 92 / .18), 0 14px 30px -18px rgb(0 0 0 / .6); }
+.topo--rolado::before { opacity: 0; }
+.topo__barra { display: flex; align-items: center; gap: 28px; height: var(--altura-topo); }
+.topo__logo { display: block; flex: none; width: 196px; margin-top: 4px; transition: transform .4s var(--ease-out); }
+.topo__logo img { width: 100%; }
+@media (hover: hover) {
+  .topo__logo:hover { transform: rotate(-2deg) scale(1.03); }
+}
+.topo__nav { margin-left: auto; }
+.topo__links { display: flex; gap: clamp(18px, 2vw, 32px); }
+.topo__links a {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  color: rgb(255 248 238 / .88);
+  font: 600 14.5px/1.2 var(--fonte-texto);
+  white-space: nowrap;
+  transition: color .25s ease;
+}
+.topo__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--dourado);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s var(--ease-out);
+}
+@media (hover: hover) {
+  .topo__links a:hover { color: var(--marfim); }
+  .topo__links a:hover::after { transform: scaleX(1); }
+}
+.topo__cta { flex: none; }
+.topo__menu { display: none; }
+
+/* menu do celular */
+@media (max-width: 68.74em) {
+  .topo__nav { display: none; }
+  .topo__cta { margin-left: auto; }
+  .topo__menu {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 46px;
+    height: 46px;
+    margin-right: -6px;
+    border-radius: 50%;
+    color: var(--marfim);
+  }
+  .topo__menu-linhas { display: grid; gap: 5px; width: 22px; }
+  .topo__menu-linhas span { display: block; height: 2px; border-radius: 2px; background: currentColor; transition: transform .4s var(--ease-out), opacity .25s ease; }
+  .topo__menu[aria-expanded='true'] .topo__menu-linhas span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .topo__menu[aria-expanded='true'] .topo__menu-linhas span:nth-child(2) { opacity: 0; }
+  .topo__menu[aria-expanded='true'] .topo__menu-linhas span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+@media (max-width: 39.99em) {
+  .topo__barra { gap: 10px; }
+  .topo__logo { width: 136px; }
+  .topo__cta { min-height: 40px; padding: 0 14px; font-size: 13px; }
+  .topo__cta .i { display: none; }
+}
+@media (max-width: 25em) {
+  .topo__cta-mais { display: none; }
+}
+@media (max-width: 22.5em) {
+  .topo__logo { width: 118px; }
+  .topo__cta { padding: 0 14px; font-size: 13px; }
+}
+
+.menu-cel {
+  position: fixed;
+  inset: var(--altura-topo) 0 0;
+  z-index: -2;
+  overflow-y: auto;
+  background:
+    radial-gradient(80% 50% at 85% 0%, rgb(217 178 92 / .16), transparent 70%),
+    var(--bordo-fundo);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.menu-cel--aberto { opacity: 1; }
+.topo--menu { background: var(--bordo-fundo); }
+.topo--menu::before { opacity: 0; }
+.menu-cel__nav { display: grid; gap: 28px; padding-block: 28px 40px; }
+.menu-cel__links li { border-bottom: 1px solid var(--fio-escuro); }
+.menu-cel__links a { display: block; padding: 16px 0; color: var(--marfim); font: 400 30px/1.1 var(--fonte-titulo); text-transform: uppercase; }
+.menu-cel__cta { justify-self: start; }
+.menu-cel__info { color: var(--texto-claro); font-size: 14px; }
+@media (prefers-reduced-motion: no-preference) {
+  .menu-cel--aberto .menu-cel__links li { animation: sobe .6s var(--ease-out) calc(var(--i) * 45ms) backwards; }
+}

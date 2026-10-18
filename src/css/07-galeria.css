@@ -1,0 +1,69 @@
+/* ---------------------------------------------------------------- galeria
+   Bordô de veludo, pra as fotos acenderem como num palco. Faixa contínua (a lista duas
+   vezes; a faixa anda o comprimento de uma em loop, translate3d), pausa no hover, no
+   botão e fora da tela (07-galeria.js). Com "reduzir movimento" ou sem JS a faixa para,
+   a cópia some e vira rolagem lateral (memória do 080).                              */
+.galeria {
+  overflow: clip;
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgb(217 178 92 / .14), transparent 70%),
+    linear-gradient(180deg, var(--bordo) 0%, var(--bordo-fundo) 100%);
+}
+.gal { --alt: clamp(260px, 22vw + 60px, 400px); position: relative; }
+.gal__trilho { display: flex; width: max-content; gap: 18px; padding-block: 8px 20px; }
+.gal__lista { display: flex; gap: 18px; }
+.gal__foto {
+  flex: none;
+  width: calc(var(--alt) * var(--r));
+  height: var(--alt);
+  overflow: hidden;
+  border-radius: var(--raio);
+  background: var(--bordo-claro);
+  box-shadow: 0 24px 40px -26px rgb(0 0 0 / .8);
+}
+.gal__foto:nth-child(odd) { transform: translateY(14px); }
+.gal__foto picture, .gal__foto img { width: 100%; height: 100%; max-width: none; }
+.gal__foto img { object-fit: cover; transition: transform 1s var(--ease-out); }
+@media (hover: hover) {
+  .gal__foto:hover img { transform: scale(1.06); }
+}
+@keyframes gal-anda { to { transform: translate3d(-50%, 0, 0); } }
+@media (prefers-reduced-motion: no-preference) {
+  .js .gal__trilho { animation: gal-anda var(--dur, 70s) linear infinite; }
+  .js .gal:hover .gal__trilho, .js .gal--parada .gal__trilho { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gal { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--margem); }
+  .gal__trilho { padding-inline: var(--margem); }
+  .gal__lista[aria-hidden] { display: none; }
+  .gal__foto { scroll-snap-align: start; }
+  .gal__controle { display: none; }
+}
+html:not(.js) .gal { overflow-x: auto; }
+html:not(.js) .gal__lista[aria-hidden], html:not(.js) .gal__controle { display: none; }
+
+.gal__controle { display: flex; justify-content: center; margin-top: 22px; }
+.gal__pausa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgb(255 248 238 / .3);
+  border-radius: 999px;
+  color: var(--marfim);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color .25s ease, border-color .25s ease;
+}
+.gal__pausa .i { width: 16px; height: 16px; color: var(--dourado); }
+.gal__i-play { display: none; }
+.gal__pausa[aria-pressed='true'] .gal__i-pausa { display: none; }
+.gal__pausa[aria-pressed='true'] .gal__i-play { display: block; }
+@media (hover: hover) {
+  .gal__pausa:hover { border-color: var(--dourado); background: rgb(255 248 238 / .06); }
+}
+@media (max-width: 39.99em) {
+  .gal__trilho, .gal__lista { gap: 12px; }
+  .gal__foto:nth-child(odd) { transform: translateY(10px); }
+}

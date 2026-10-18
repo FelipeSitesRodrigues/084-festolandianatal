@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------------- rodapé */
+.rodape {
+  --cor-foco: var(--dourado-claro);
+  position: relative;
+  padding-top: clamp(56px, 6vw, 88px);
+  border-top: 1px solid rgb(217 178 92 / .25);
+  background: var(--bordo-rodape);
+  color: var(--texto-claro);
+  color-scheme: dark;
+}
+.rodape ::selection { background: var(--dourado); color: var(--tinta); }
+.rodape__grade { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: 40px clamp(28px, 3vw, 56px); }
+.rodape__logo { width: 270px; }
+.rodape__marca p { max-width: 30em; margin-top: 18px; font-size: 14px; line-height: 1.65; }
+.rodape__titulo { margin-bottom: 16px; color: var(--dourado); font: 700 13px/1.2 var(--fonte-texto); letter-spacing: .12em; text-transform: uppercase; }
+.rodape__col ul { display: grid; gap: 6px; }
+.rodape__col a { display: inline-block; padding: 4px 0; color: var(--texto-claro); font-size: 14.5px; transition: color .25s ease; }
+.rodape__contato li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.5; }
+.rodape__contato li > span { padding-top: 4px; }
+.rodape__contato .i { width: 20px; height: 20px; margin-top: 6px; color: var(--dourado); }
+.rodape__contato a { padding-top: 4px; }
+.rodape__insta { display: inline-flex !important; align-items: center; gap: 10px; color: var(--marfim) !important; font-weight: 700; }
+.rodape__insta .i { width: 24px; height: 24px; color: var(--dourado); }
+.rodape__nota { margin-top: 12px; font-size: 13.5px; line-height: 1.55; }
+@media (hover: hover) {
+  .rodape__col a:hover { color: var(--dourado-claro); }
+}
+.rodape__base { margin-top: 48px; padding-block: 22px calc(22px + env(safe-area-inset-bottom)); border-top: 1px solid var(--fio-escuro); text-align: center; }
+.rodape__base p { color: rgb(255 248 238 / .66); font-size: 13px; }
+@media (max-width: 63.99em) {
+  .rodape__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rodape__marca { grid-column: 1 / -1; }
+}
+@media (max-width: 39.99em) {
+  .rodape__grade { grid-template-columns: minmax(0, 1fr); }
+  .rodape__base { padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
+}

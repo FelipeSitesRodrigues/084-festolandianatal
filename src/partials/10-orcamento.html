@@ -1,0 +1,90 @@
+    <section class="secao secao--escura orc" id="orcamento" aria-labelledby="orc-titulo" data-zap-some>
+      <div class="orc__fundo" aria-hidden="true">
+        <img data-img="hero-fundo" sizes="100vw" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="neve" aria-hidden="true"></div>
+      <div class="container orc__grade">
+        <div class="orc__texto" data-revela>
+          <span class="filete" aria-hidden="true"><i data-i="sparkle" data-w="fill"></i></span>
+          <h2 class="titulo" id="orc-titulo">A noite de Natal é <span class="destaque">uma só</span>. Garanta a sua.</h2>
+          <p class="apoio">Manda a data, o horário e o elenco que você imagina. A gente volta com a proposta no mesmo dia.</p>
+          <a class="btn btn--dourado orc__btn" href="{{wa:geral}}" data-zap="orcamento"><i data-i="whatsapp-logo" data-w="fill"></i>Reservar meu Natal</a>
+          <ul class="orc__info" role="list">
+            <li><i data-i="whatsapp-logo" data-w="regular"></i><span>{{cfg.whatsappTexto}}</span></li>
+            <li><i data-i="clock" data-w="regular"></i><span>{{cfg.horario}}</span></li>
+            <li><i data-i="map-pin" data-w="regular"></i><span>{{cfg.cidade}} e região</span></li>
+          </ul>
+          <figure class="orc__foto">
+            <img data-img="orc-imperial" sizes="(min-width: 80em) 440px, 34vw" alt="Papai Noel Imperial com a lanterna acesa, diante de uma cortina vermelha com flocos de neve" loading="lazy" decoding="async">
+          </figure>
+        </div>
+        <div class="orc__cartao" data-revela="direita">
+          <h3 class="orc__cartao-titulo">Pedir orçamento</h3>
+          <p class="orc__cartao-apoio">Preencha e a mensagem sai pronta no WhatsApp.</p>
+          <div class="orc__form" id="orc-form-lugar">
+            <template id="orc-form-molde">
+              <form class="form" novalidate>
+                <div class="form__grade">
+                  <div class="campo">
+                    <label for="f-nome">Seu nome</label>
+                    <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="f-nome-erro">
+                    <p class="campo__erro" id="f-nome-erro" aria-live="polite"></p>
+                  </div>
+                  <div class="campo">
+                    <label for="f-whatsapp">WhatsApp</label>
+                    <input id="f-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 91234-5678" required aria-describedby="f-whatsapp-erro">
+                    <p class="campo__erro" id="f-whatsapp-erro" aria-live="polite"></p>
+                  </div>
+                  <div class="campo campo--largo">
+                    <label for="f-tipo">Tipo de evento</label>
+                    <select id="f-tipo" name="tipo" required aria-describedby="f-tipo-erro">
+                      <option value="">Escolha</option>
+                      <option>Noite de Natal em casa</option>
+                      <option>Natal no condomínio</option>
+                      <option>Confraternização de empresa</option>
+                      <option>Shopping ou loja</option>
+                      <option>Escola ou buffet</option>
+                      <option>Espetáculo Natal Encantado</option>
+                    </select>
+                    <p class="campo__erro" id="f-tipo-erro" aria-live="polite"></p>
+                  </div>
+                  <div class="campo">
+                    <label for="f-data">Data</label>
+                    <input id="f-data" name="data" type="date" required aria-describedby="f-data-erro">
+                    <p class="campo__erro" id="f-data-erro" aria-live="polite"></p>
+                  </div>
+                  <div class="campo">
+                    <label for="f-horario">Horário <span class="campo__opc">(opcional)</span></label>
+                    <input id="f-horario" name="horario" type="time">
+                  </div>
+                  <div class="campo campo--largo">
+                    <label for="f-criancas">Quantas crianças <span class="campo__opc">(mais ou menos)</span></label>
+                    <input id="f-criancas" name="criancas" type="text" inputmode="numeric" maxlength="4" placeholder="Ex.: 8">
+                  </div>
+                  <fieldset class="campo campo--largo chips">
+                    <legend>Quem você quer na festa <span class="campo__opc">(pode marcar mais de um)</span></legend>
+                    <label class="chip"><input type="checkbox" name="elenco" value="Papai Noel" checked><span>Papai Noel</span></label>
+                    <label class="chip"><input type="checkbox" name="elenco" value="Mamãe Noel"><span>Mamãe Noel</span></label>
+                    <label class="chip"><input type="checkbox" name="elenco" value="Duendes músicos"><span>Duendes músicos</span></label>
+                    <label class="chip"><input type="checkbox" name="elenco" value="Noeletes"><span>Noeletes</span></label>
+                    <label class="chip"><input type="checkbox" name="elenco" value="Soldadinho e Bailarina"><span>Soldadinho e Bailarina</span></label>
+                    <label class="chip"><input type="checkbox" name="elenco" value="Personagens em clima de Natal"><span>Personagens de Natal</span></label>
+                  </fieldset>
+                  <div class="campo campo--largo">
+                    <label for="f-mensagem">Mensagem <span class="campo__opc">(opcional)</span></label>
+                    <textarea id="f-mensagem" name="mensagem" rows="3" placeholder="Bairro, nome das crianças, alguma surpresa..."></textarea>
+                  </div>
+                  <div class="campo campo--largo">
+                    <label class="aceite"><input type="checkbox" name="aceite" required aria-describedby="f-aceite-erro"><span>Autorizo a Festolândia a me responder pelo WhatsApp sobre este pedido.</span></label>
+                    <p class="campo__erro" id="f-aceite-erro" aria-live="polite"></p>
+                  </div>
+                </div>
+                <button class="btn btn--dourado form__enviar" type="submit"><i data-i="whatsapp-logo" data-w="fill"></i><span class="form__enviar-texto">Quero meu Natal Encantado</span></button>
+                <p class="form__sucesso" role="status" hidden>Abrimos o WhatsApp com o seu pedido. Se a conversa não abriu, <a class="form__link" href="{{wa:geral}}">toque aqui</a>.</p>
+              </form>
+            </template>
+            <noscript><p class="orc__sem-js">Pra pedir o orçamento, <a href="{{wa:geral}}">chame no WhatsApp</a>.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>

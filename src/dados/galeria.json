@@ -1,0 +1,13 @@
+{
+  "itens": [
+    { "foto": "gal-imperial", "alt": "Papai Noel Imperial de manto marfim segurando uma lanterna diante de cortina vermelha" },
+    { "foto": "gal-noeletes-dupla", "alt": "Noelete de vestido vermelho e dourado estendendo a mão" },
+    { "foto": "gal-violinista", "alt": "Violinista de cartola e casaca dourada tocando" },
+    { "foto": "gal-mickey", "alt": "Mickey e Minnie com roupa de Natal em um cenário de neve" },
+    { "foto": "gal-duende-noel", "alt": "Duende violinista e Papai Noel com cajado em uma sala decorada" },
+    { "foto": "gal-soldadinho", "alt": "Soldadinho do Quebra-Nozes de casaca vermelha e chapéu alto" },
+    { "foto": "gal-noelete", "alt": "Noelete de casaco verde com cajado dourado sorrindo" },
+    { "foto": "gal-sino", "alt": "Papai Noel clássico tocando um sino ao lado da lareira" },
+    { "foto": "gal-bailarina", "alt": "Bailarina do Quebra-Nozes segurando um soldadinho de madeira" }
+  ]
+}

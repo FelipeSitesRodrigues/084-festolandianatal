@@ -1,0 +1,114 @@
+/* ---------------------------------------------------------------- orçamento
+   O fecho da página volta pro palco do hero: a mesma cortina (já em cache), mais escura,
+   com a neve caindo. Texto e WhatsApp direto à esquerda, cartão marfim com o formulário à
+   direita. O formulário entra perto da tela (10-orcamento.js); até lá o lugar dele guarda
+   a altura, pra a página não crescer no meio da rolagem.                              */
+.orc { overflow: clip; background: var(--bordo-fundo); }
+.orc__fundo { position: absolute; inset: 0; z-index: -3; }
+.orc__fundo picture, .orc__fundo img { width: 100%; height: 100%; max-width: none; }
+.orc__fundo img { object-fit: cover; object-position: 70% 50%; opacity: .55; }
+.orc::before { content: ''; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgb(34 5 10 / .94) 0%, rgb(34 5 10 / .8) 45%, rgb(34 5 10 / .5) 100%); }
+.orc__grade { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: start; gap: clamp(36px, 5vw, 80px); }
+.orc__texto { display: grid; justify-items: start; gap: 18px; }
+.orc__texto .titulo { font-size: clamp(36px, 2.6vw + 18px, 64px); }
+.orc__btn { margin-top: 8px; }
+.orc__info { display: grid; gap: 10px; margin-top: 14px; }
+.orc__info li { display: flex; align-items: center; gap: 12px; color: var(--texto-claro); font-size: 15px; font-weight: 500; }
+.orc__info .i { width: 22px; height: 22px; color: var(--dourado); }
+/* computador: a coluna do texto acompanha a rolagem ao lado do formulário (que é mais alto),
+   então o convite e o WhatsApp direto ficam à vista enquanto a pessoa preenche */
+@media (min-width: 64em) {
+  .orc__texto { position: sticky; top: calc(var(--altura-topo) + 40px); }
+}
+/* foto em moldura sob os contatos (computador): a lanterna fecha a página como abriu o hero.
+   Mesma moldura dourada deslocada da seção do encanto. */
+.orc__foto { position: relative; width: min(100%, 440px); margin: 30px 18px 18px 0; }
+.orc__foto::before { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 1.5px solid rgb(217 178 92 / .55); border-radius: calc(var(--raio) + 4px); }
+.orc__foto picture { position: relative; z-index: 1; overflow: hidden; border-radius: var(--raio); box-shadow: 0 30px 60px -36px rgb(0 0 0 / .9); }
+.orc__foto img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 63.99em) {
+  .orc__foto { display: none; }
+}
+
+.orc__cartao {
+  --cor-foco: var(--vermelho);
+  padding: clamp(24px, 2.6vw, 38px);
+  border: 1px solid rgb(217 178 92 / .55);
+  border-radius: calc(var(--raio) + 4px);
+  background: var(--marfim);
+  color: var(--texto);
+  box-shadow: 0 40px 80px -40px rgb(0 0 0 / .85);
+  color-scheme: light;
+}
+.orc__cartao ::selection { background: var(--vermelho); color: var(--marfim); }
+.orc__cartao-titulo { color: var(--bordo); font: 400 30px/1.05 var(--fonte-titulo); text-transform: uppercase; }
+.orc__cartao-apoio { margin-top: 6px; font-size: 14.5px; }
+.orc__form { min-height: var(--reserva, 640px); margin-top: 22px; }
+.orc__form--montado { min-height: 0; }
+.orc__sem-js a { color: var(--vermelho); font-weight: 700; text-decoration: underline; }
+
+/* formulário: rótulo em cima, erro embaixo (nunca só o placeholder) */
+.form__grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 16px; }
+.campo { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.campo--largo { grid-column: 1 / -1; }
+.campo label, .campo legend { color: var(--bordo); font-size: 13.5px; font-weight: 700; }
+.campo__opc { color: var(--texto); font-weight: 500; }
+.campo input:not([type='checkbox']), .campo select, .campo textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1.5px solid #E2CDB0;
+  border-radius: var(--raio-campo);
+  background: var(--branco);
+  color: var(--tinta);
+  font-size: 15.5px;
+  font-weight: 500;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.campo textarea { resize: vertical; min-height: 84px; }
+.campo select { appearance: none; padding-right: 40px; background: var(--branco) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m5 8 5 5 5-5' fill='none' stroke='%23B3172F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 14px center / 18px no-repeat; }
+.campo ::placeholder { color: #8A6E62; opacity: 1; }
+.campo input:focus, .campo select:focus, .campo textarea:focus { outline: none; border-color: var(--vermelho); box-shadow: 0 0 0 4px rgb(179 23 47 / .14); }
+.campo [aria-invalid='true'] { border-color: var(--vermelho) !important; background-color: #FFF4F4; }
+.campo__erro { min-height: 0; color: var(--vermelho); font-size: 13px; font-weight: 600; }
+.campo__erro:empty { display: none; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; border: 0; }
+.chips legend { width: 100%; margin-bottom: 8px; padding: 0; }
+.chip { position: relative; cursor: pointer; }
+.chip input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1.5px solid #E2CDB0;
+  border-radius: 999px;
+  background: var(--branco);
+  color: var(--tinta);
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .3s var(--ease-out);
+}
+.chip input:checked + span { border-color: var(--vermelho); background: var(--vermelho); color: var(--marfim); }
+.chip input:focus-visible + span { outline: 2px solid var(--vermelho); outline-offset: 3px; }
+@media (hover: hover) {
+  .chip:hover span { border-color: var(--vermelho); }
+}
+.chip:active span { transform: scale(.96); }
+
+.aceite { display: flex; align-items: flex-start; gap: 10px; color: var(--texto) !important; font-weight: 500 !important; line-height: 1.45; cursor: pointer; }
+.aceite input { flex: none; width: 20px; height: 20px; margin-top: 1px; accent-color: var(--vermelho); }
+.form__enviar { width: 100%; margin-top: 20px; }
+.form__enviar[aria-busy='true'] { opacity: .75; pointer-events: none; }
+.form__sucesso { margin-top: 14px; padding: 12px 14px; border-radius: var(--raio-campo); background: #EAF6EE; color: #14532D; font-size: 14px; font-weight: 600; }
+.form__sucesso a { text-decoration: underline; }
+
+@media (max-width: 63.99em) {
+  .orc__grade { grid-template-columns: minmax(0, 1fr); }
+  .orc::before { background: linear-gradient(180deg, rgb(34 5 10 / .9) 0%, rgb(34 5 10 / .8) 100%); }
+}
+@media (max-width: 39.99em) {
+  .form__grade { grid-template-columns: minmax(0, 1fr); }
+  .orc__form { min-height: var(--reserva, 900px); }
+}

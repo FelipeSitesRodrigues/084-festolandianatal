@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- @preload-hero -->
+  <script>
+    // js: liga as animações. js-abrindo: no celular a seção logo abaixo do hero só é montada
+    // depois da primeira pintura (99-desempenho.css, memória do 079). Sai na 1ª pintura ou em 2,5 s.
+    (function () {
+      var h = document.documentElement
+      h.classList.add('js', 'js-abrindo')
+      var pronto = function () { h.classList.remove('js-abrindo') }
+      try {
+        new PerformanceObserver(function (l) { if (l.getEntriesByName('first-contentful-paint').length) pronto() }).observe({ type: 'paint', buffered: true })
+      } catch (e) { pronto() }
+      setTimeout(pronto, 2500)
+    })()
+  </script>
+  <title>{{pag.titulo}}</title>
+  <meta name="description" content="{{pag.descricao}}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3B0A12">
+  <meta name="format-detection" content="telephone=no">
+  <!-- @meta-dominio -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Festolândia Premium Natal Encantado">
+  <meta property="og:title" content="{{pag.ogTitulo}}">
+  <meta property="og:description" content="{{pag.ogDescricao}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Papai Noel de manto marfim segurando uma lanterna acesa diante de uma cortina de veludo vermelho">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/lilita-one.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-var.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- @css -->
+</head>
+<body>
+  <!--
+  THESIS: o Natal como espetáculo de teatro. A cortina, a lanterna e o elenco real em cena, no lugar da página de buffet com clip-art de Papai Noel.
+  OWN-WORLD: bordô de veludo, verde pinheiro, dourado de enfeite e marfim de neve. Títulos em Lilita One caixa alta, texto em Montserrat. Botão em pílula dourada, cartões de 22 px com foto real, a estrelinha de quatro pontas da logo como assinatura.
+  STORY: a família vê que o Papai Noel é de verdade, conhece o elenco pela foto, entende como reservar e chama no WhatsApp com a mensagem pronta.
+  FIRST VIEWPORT: cortina e neve em tela cheia, título enorme à esquerda, o Papai Noel Imperial com a lanterna acesa à direita, bolas da logo penduradas no alto, pílula dourada "Reservar meu Natal" na primeira dobra.
+  FORM: mockup v2 aprovado pelo Felipe em 2026-10-17; o sorteio de direção da impeccable foi dispensado por decisão dele (direção fixada pelo cliente, sem seed key).
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+  -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <!-- @parcial 00-header -->
+
+  <main id="conteudo">
+<!-- @conteudo -->
+  </main>
+
+  <!-- @parcial 11-rodape -->
+
+  <a class="zap-flutuante" href="{{wa:geral}}" data-zap="flutuante" aria-label="Reservar o Papai Noel pelo WhatsApp"><i data-i="whatsapp-logo" data-w="fill"></i></a>
+
+  <!-- @sprite -->
+  <!-- @schema -->
+  <!-- @js -->
+</body>
+</html>

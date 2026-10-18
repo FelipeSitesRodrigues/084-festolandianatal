@@ -1,0 +1,63 @@
+/* ---------------------------------------------------------------- depoimentos
+   A nota do Google grande à esquerda (o selo que o mockup mostrava), quatro avaliações reais
+   em grade 2 x 2 à direita. Celular: a nota em cima, os cartões em coluna.            */
+.dep__grade { display: grid; grid-template-columns: minmax(0, .62fr) minmax(0, 1.38fr); align-items: center; gap: clamp(28px, 4vw, 64px); }
+.dep__nota {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 40px 28px;
+  border-radius: var(--raio);
+  background:
+    radial-gradient(80% 70% at 50% 0%, rgb(217 178 92 / .22), transparent 70%),
+    var(--bordo);
+  color: var(--texto-claro);
+  text-align: center;
+  box-shadow: 0 30px 60px -36px rgb(42 6 12 / .8);
+}
+.dep__numero { color: var(--marfim); font: 400 clamp(84px, 5vw + 30px, 124px)/.9 var(--fonte-titulo); }
+.dep__estrelas { display: flex; gap: 4px; color: var(--dourado); }
+.dep__estrelas .i { width: 26px; height: 26px; }
+.dep__nota p { max-width: 14em; font-size: 15px; line-height: 1.45; }
+.dep__nota p strong { color: var(--marfim); }
+.dep__lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.dep figure {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  padding: 26px 26px 22px;
+  border: 1px solid var(--fio);
+  border-radius: var(--raio);
+  background: var(--branco);
+  box-shadow: 0 20px 40px -32px rgb(42 6 12 / .45);
+}
+.dep__aspas { width: 34px; height: 34px; color: var(--dourado); }
+.dep__texto { flex: 1; color: var(--tinta); font-size: 15.5px; font-weight: 500; line-height: 1.6; }
+.dep__quem { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--fio); }
+.dep__ini {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--vermelho);
+  color: var(--marfim);
+  font: 400 17px/1 var(--fonte-titulo);
+}
+.dep__quem > span:last-child { display: grid; line-height: 1.3; }
+.dep__quem strong { color: var(--bordo); font-size: 15px; }
+.dep__onde { color: var(--texto); font-size: 13px; }
+@media (max-width: 63.99em) {
+  .dep__grade { grid-template-columns: minmax(0, 1fr); }
+  .dep__nota { grid-template-columns: auto auto; column-gap: 22px; justify-content: center; padding: 28px; }
+  .dep__numero { grid-row: span 2; }
+  .dep__nota p { text-align: left; }
+  .dep__estrelas { align-self: end; }
+}
+@media (max-width: 39.99em) {
+  .dep__lista { grid-template-columns: minmax(0, 1fr); }
+  .dep__numero { font-size: 76px; }
+  .dep__estrelas .i { width: 20px; height: 20px; }
+}

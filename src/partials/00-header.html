@@ -1,0 +1,34 @@
+  <header class="topo" id="topo">
+    <div class="container topo__barra">
+      <a class="topo__logo" href="#inicio" aria-label="Festolândia Premium Natal Encantado, voltar ao início">
+        <img data-img="logo-topo" data-img-max="360" sizes="(min-width: 64em) 196px, 150px" alt="" decoding="async">
+      </a>
+      <nav class="topo__nav" aria-label="Seções do site">
+        <ul class="topo__links" role="list">
+          <li><a href="#onde">Onde atendemos</a></li>
+          <li><a href="#elenco">Elenco</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--dourado btn--p topo__cta" href="{{wa:geral}}" data-zap="topo"><i data-i="whatsapp-logo" data-w="fill"></i><span>Reservar<span class="topo__cta-mais"> meu Natal</span></span></a>
+      <button class="topo__menu" type="button" aria-expanded="false" aria-controls="menu-cel" aria-label="Abrir o menu">
+        <span class="topo__menu-linhas" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+    <div class="menu-cel" id="menu-cel" hidden>
+      <nav class="container menu-cel__nav" aria-label="Menu">
+        <ul class="menu-cel__links" role="list">
+          <li style="--i:0"><a href="#onde">Onde atendemos</a></li>
+          <li style="--i:1"><a href="#elenco">Elenco</a></li>
+          <li style="--i:2"><a href="#como-funciona">Como funciona</a></li>
+          <li style="--i:3"><a href="#galeria">Galeria</a></li>
+          <li style="--i:4"><a href="#duvidas">Dúvidas</a></li>
+          <li style="--i:5"><a href="#orcamento">Orçamento</a></li>
+        </ul>
+        <a class="btn btn--dourado menu-cel__cta" href="{{wa:geral}}" data-zap="menu"><i data-i="whatsapp-logo" data-w="fill"></i>Reservar meu Natal</a>
+        <p class="menu-cel__info">{{cfg.whatsappTexto}} · {{cfg.horario}}</p>
+      </nav>
+    </div>
+  </header>

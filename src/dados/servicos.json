@@ -1,0 +1,52 @@
+{
+  "itens": [
+    {
+      "id": "visita",
+      "nome": "Visita na noite de Natal",
+      "linha": "O Papai Noel bate na porta, chama cada criança pelo nome e entrega os presentes que você separou.",
+      "mensagem": "a *visita do Papai Noel na noite de Natal*",
+      "foto": "srv-visita",
+      "alt": "Papai Noel de óculos lendo a lista de presentes ao lado da janela"
+    },
+    {
+      "id": "condominio",
+      "nome": "Natal no condomínio",
+      "linha": "Chegada no salão ou no jardim, foto com cada família e lembrancinha pras crianças.",
+      "mensagem": "o *Natal do condomínio*",
+      "foto": "srv-condominio",
+      "alt": "Papai Noel e Mamãe Noel ao lado da árvore de Natal no hall de um prédio"
+    },
+    {
+      "id": "empresa",
+      "nome": "Confraternização de empresa",
+      "linha": "Papai Noel, Noeletes e duendes na festa de fim de ano, com os colaboradores e os filhos deles.",
+      "mensagem": "a *confraternização da empresa*",
+      "foto": "srv-empresa",
+      "alt": "Duende violinista e duenda dançando ao lado de uma árvore de Natal dourada em um saguão"
+    },
+    {
+      "id": "shopping",
+      "nome": "Shopping e loja",
+      "linha": "Chegada do Papai Noel, trono pra foto e personagens circulando pra atrair família em dezembro.",
+      "mensagem": "*Natal em shopping ou loja*",
+      "foto": "srv-shopping",
+      "alt": "Papai Noel no trenó com Noeletes e personagens em um cenário de Natal"
+    },
+    {
+      "id": "escola",
+      "nome": "Escola e buffet",
+      "linha": "Apresentação natalina pra turma inteira, com música, brincadeira e foto com cada aluno.",
+      "mensagem": "*Natal na escola ou no buffet*",
+      "foto": "srv-escola",
+      "alt": "Duende e duenda acenando ao lado de uma árvore de Natal dourada"
+    },
+    {
+      "id": "espetaculo",
+      "nome": "Espetáculo Natal Encantado",
+      "linha": "O elenco completo em cena: Papai Noel, Mamãe Noel, duendes violinistas, Soldadinho e Bailarina do Quebra-Nozes.",
+      "mensagem": "o *Espetáculo Natal Encantado*",
+      "foto": "srv-espetaculo",
+      "alt": "Papai Noel com duende, Noeletes e convidadas em um salão decorado para o Natal"
+    }
+  ]
+}

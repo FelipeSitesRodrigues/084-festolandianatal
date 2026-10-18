@@ -1,0 +1,82 @@
+/* ---------------------------------------------------------------- onde o Natal acontece
+   Mosaico com foto real em cada cartão (no lugar dos 6 cartões de ícone iguais do mockup).
+   Computador, grade de 6 colunas: a visita da noite de Natal é o cartão grande (4 colunas,
+   2 linhas) com dois empilhados ao lado, depois dois cartões deitados lado a lado, e o
+   espetáculo fecha numa faixa larga com o texto num painel bordô. Tablet: 2 colunas.
+   Celular: uma coluna.                                                                 */
+.srvs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: minmax(286px, 21vw);
+  gap: 18px;
+}
+.srv { grid-column: span 2; }
+.srv:nth-child(4), .srv:nth-child(5) { grid-column: span 3; }
+.srv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: var(--raio);
+  background: var(--bordo);
+  color: var(--marfim);
+  box-shadow: 0 22px 44px -30px rgb(42 6 12 / .7);
+  transition: transform .55s var(--ease-out), box-shadow .55s var(--ease-out);
+}
+.srv--grande { grid-column: 1 / 5; grid-row: 1 / 3; }
+.srv--faixa { grid-column: 1 / -1; grid-row: span 1; flex-direction: row; justify-content: flex-start; }
+.srv__foto { position: absolute; inset: 0; }
+.srv__foto picture, .srv__foto img { width: 100%; height: 100%; max-width: none; }
+.srv__foto img { object-fit: cover; transition: transform 1.1s var(--ease-out); }
+.srv__foto::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(42 6 12 / 0) 30%, rgb(42 6 12 / .68) 62%, rgb(34 5 10 / .94) 100%);
+}
+.srv__corpo { position: relative; display: grid; justify-items: start; gap: 8px; padding: 22px 22px 22px; }
+.srv__nome { font: 400 clamp(21px, .5vw + 16px, 26px)/1.05 var(--fonte-titulo); text-transform: uppercase; letter-spacing: .01em; }
+.srv__linha { color: rgb(255 248 238 / .86); font-size: 14px; line-height: 1.5; text-wrap: pretty; }
+.srv__btn { margin-top: 8px; }
+.srv--grande .srv__corpo { gap: 12px; padding: 34px; }
+.srv--grande .srv__nome { font-size: clamp(30px, 1.4vw + 16px, 42px); }
+.srv--grande .srv__linha { max-width: 30em; font-size: 16px; }
+.srv--grande .srv__btn { min-height: 52px; padding: 0 24px; font-size: 15px; }
+
+/* faixa do espetáculo: foto à direita, painel bordô com o texto à esquerda */
+.srv--faixa .srv__foto { left: 42%; }
+.srv--faixa .srv__foto::after { background: linear-gradient(90deg, var(--bordo) 0%, rgb(59 10 18 / .35) 26%, rgb(59 10 18 / 0) 50%); }
+.srv--faixa .srv__corpo {
+  align-content: center;
+  width: 46%;
+  min-height: 100%;
+  padding: 36px 40px;
+  background:
+    radial-gradient(70% 90% at 0% 100%, rgb(217 178 92 / .18), transparent 70%),
+    var(--bordo);
+}
+.srv--faixa .srv__nome { font-size: clamp(28px, 1.3vw + 16px, 40px); color: var(--dourado); }
+.srv--faixa .srv__linha { font-size: 15.5px; }
+
+@media (hover: hover) {
+  .srv:hover { transform: translateY(-5px); box-shadow: 0 32px 54px -30px rgb(42 6 12 / .85); }
+  .srv:hover .srv__foto img { transform: scale(1.06); }
+}
+
+@media (max-width: 63.99em) {
+  .srvs { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: minmax(260px, 38vw); }
+  .srv, .srv:nth-child(4), .srv:nth-child(5) { grid-column: span 1; }
+  .srv--grande { grid-column: 1 / -1; grid-row: span 1; min-height: 440px; }
+  .srv--faixa { grid-column: 1 / -1; }
+}
+@media (max-width: 39.99em) {
+  .srvs { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; gap: 14px; }
+  .srv { min-height: 340px; }
+  .srv--grande { min-height: 440px; }
+  .srv--grande .srv__corpo { padding: 24px; }
+  .srv--faixa { flex-direction: column; justify-content: flex-end; min-height: 0; }
+  .srv--faixa .srv__foto { position: relative; inset: auto; left: auto; aspect-ratio: 3 / 2; }
+  .srv--faixa .srv__foto::after { background: linear-gradient(180deg, rgb(59 10 18 / 0) 60%, var(--bordo) 100%); }
+  .srv--faixa .srv__corpo { width: auto; min-height: 0; align-content: start; padding: 4px 24px 26px; background: var(--bordo); }
+}

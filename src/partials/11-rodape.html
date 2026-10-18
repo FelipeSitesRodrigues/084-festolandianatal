@@ -1,0 +1,36 @@
+  <footer class="rodape" id="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__marca">
+        <img data-img="logo" data-img-max="640" sizes="(min-width: 64em) 300px, 260px" alt="Festolândia Premium Natal Encantado" loading="lazy" decoding="async" class="rodape__logo">
+        <p>A Festolândia Premium Natal Encantado é a linha de Natal da {{cfg.empresa}}, que leva personagens vivos a festas em São Paulo há 20 anos: Papai Noel, Mamãe Noel, duendes músicos, Noeletes e o Quebra-Nozes para casas, condomínios, empresas, shoppings e escolas.</p>
+      </div>
+      <nav class="rodape__col" aria-label="Seções do site">
+        <h2 class="rodape__titulo">Navegação</h2>
+        <ul role="list">
+          <li><a href="#onde">Onde atendemos</a></li>
+          <li><a href="#elenco">Elenco</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+        </ul>
+      </nav>
+      <div class="rodape__col">
+        <h2 class="rodape__titulo">Contato</h2>
+        <ul role="list" class="rodape__contato">
+          <li><i data-i="whatsapp-logo" data-w="regular"></i><a href="{{wa:geral}}" data-zap="rodape">{{cfg.whatsappTexto}}</a></li>
+          <li><i data-i="envelope-simple" data-w="regular"></i><a href="mailto:{{cfg.email}}">{{cfg.email}}</a></li>
+          <li><i data-i="map-pin" data-w="regular"></i><span>{{cfg.endereco}}<br>{{cfg.cidade}}, {{cfg.uf}}</span></li>
+          <li><i data-i="clock" data-w="regular"></i><span>{{cfg.horario}}</span></li>
+        </ul>
+      </div>
+      <div class="rodape__col">
+        <h2 class="rodape__titulo">Siga no Instagram</h2>
+        <a class="rodape__insta" href="{{cfg.instagramUrl}}" target="_blank" rel="noopener"><i data-i="instagram-logo" data-w="regular"></i>{{cfg.instagram}}</a>
+        <p class="rodape__nota">Personagens o ano inteiro: aniversário, inauguração e evento de empresa.</p>
+      </div>
+    </div>
+    <div class="container rodape__base">
+      <p>© {{ano}} Festolândia Premium Natal Encantado. Todos os direitos reservados.</p>
+    </div>
+  </footer>

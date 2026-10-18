@@ -1,0 +1,268 @@
+/* ---------------------------------------------------------------- tokens
+   Paleta do mockup v2 aprovado (prompt-mockup.md), conferida no contraste:
+   - bordô #3B0A12: hero, orçamento e rodapé (veludo da cortina). Títulos no claro.
+   - vermelho #B3172F: o destaque dos títulos no claro (6,6:1 no marfim) e os acentos.
+   - verde pinheiro #123A2B: a seção do encanto (a galeria, no meio, é a outra escura, em bordô).
+   - dourado #D9B25C: botão chapado (sempre com texto tinta, 8:1), ícone e destaque no escuro.
+     Dourado em texto no claro reprova (2,1:1): no claro o destaque é o vermelho.
+   - marfim #FFF8EE e creme #F6EADB: os fundos claros, alternando.
+   - tinta #2B1712: texto do botão dourado. Texto corrido no claro em #5C4036 (7,9:1).
+   Raio: cartão 22 px, foto dentro de cartão 14 px, campo 12 px, botão em pílula.     */
+:root {
+  color-scheme: light;
+  --bordo: #3B0A12;
+  --bordo-fundo: #2A060C;
+  --bordo-rodape: #22050A;
+  --bordo-claro: #5B1521;
+  --vermelho: #B3172F;
+  --vermelho-vivo: #D02A42;
+  --verde: #123A2B;
+  --verde-fundo: #0C2A1F;
+  --dourado: #D9B25C;
+  --dourado-claro: #F4DC96;
+  --dourado-escuro: #B88C3E;
+  --marfim: #FFF8EE;
+  --creme: #F6EADB;
+  --branco: #FFFFFF;
+  --tinta: #2B1712;
+  --texto: #5C4036;
+  --texto-claro: rgb(255 248 238 / .84);
+  --fio: #EAD9C2;
+  --fio-escuro: rgb(255 248 238 / .14);
+
+  --fonte-titulo: 'Lilita One', 'Lilita fallback', 'Arial Black', sans-serif;
+  --fonte-texto: 'Montserrat', 'Montserrat fallback', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  --container: 1240px;
+  --margem: clamp(16px, 4.4vw, 96px);
+  --secao-y: clamp(72px, 7vw, 120px);
+  --altura-topo: 78px;
+  --raio: 22px;
+  --raio-foto: 14px;
+  --raio-campo: 12px;
+
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-suave: cubic-bezier(.22, .9, .24, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+
+  --cor-titulo: var(--bordo);
+  --cor-texto: var(--texto);
+  --cor-destaque: var(--vermelho);
+  --cor-icone: var(--vermelho);
+  --cor-foco: var(--vermelho);
+}
+@media (max-width: 63.99em) {
+  :root { --altura-topo: 64px; }
+}
+
+/* ---------------------------------------------------------------- reset */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--altura-topo);
+  background: var(--bordo-fundo);
+  scrollbar-color: var(--bordo-claro) var(--bordo-fundo);
+}
+/* Tela larga e zoom-out (memória do 080): o build troca px por rem e, acima de 1920 de
+   largura, a raiz cresce com a tela e a página inteira escala junto. */
+@media (min-width: 120.0625em) {
+  html { font-size: .83333vw; }
+}
+body {
+  min-height: 100vh;
+  background: var(--marfim);
+  color: var(--cor-texto);
+  font: 400 16px/1.65 var(--fonte-texto);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: normal;
+  overflow-x: clip;
+}
+img, picture, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; padding: 0; }
+h1, h2, h3, h4 { font-weight: inherit; font-size: inherit; line-height: inherit; }
+strong { font-weight: 700; }
+figure, blockquote { margin: 0; }
+::selection { background: var(--vermelho); color: var(--marfim); }
+:focus-visible { outline: 2px solid var(--cor-foco); outline-offset: 3px; border-radius: 6px; }
+[tabindex='-1']:focus { outline: none; }
+[hidden] { display: none !important; }
+
+.pular {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 200;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: var(--dourado);
+  color: var(--tinta);
+  font: 700 13px/1 var(--fonte-texto);
+  transform: translateY(-160%);
+  transition: transform .2s var(--ease-out);
+}
+.pular:focus { transform: none; }
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container { width: min(var(--container), 100% - var(--margem) * 2); margin-inline: auto; }
+.i { width: 24px; height: 24px; flex: none; fill: currentColor; }
+
+/* ---------------------------------------------------------------- fundos das seções */
+.secao { position: relative; padding-block: var(--secao-y); isolation: isolate; }
+.secao--marfim { background: var(--marfim); }
+.secao--creme { background: var(--creme); }
+.secao--escura {
+  --cor-titulo: var(--marfim);
+  --cor-texto: var(--texto-claro);
+  --cor-destaque: var(--dourado);
+  --cor-icone: var(--dourado);
+  --cor-foco: var(--dourado-claro);
+  color-scheme: dark;
+  color: var(--cor-texto);
+}
+.secao--escura ::selection { background: var(--dourado); color: var(--tinta); }
+
+/* ---------------------------------------------------------------- títulos de seção
+   Assinatura do mockup: o filete dourado com a estrelinha de quatro pontas da logo no meio,
+   acima de cada título. Título em Lilita One caixa alta; uma palavra no vermelho (claro) ou
+   no dourado (escuro).                                                                */
+.cab { display: grid; justify-items: center; gap: 14px; margin-bottom: clamp(36px, 4vw, 56px); text-align: center; }
+.cab--esq { justify-items: start; text-align: left; }
+.filete { display: flex; align-items: center; gap: 12px; color: var(--dourado); }
+.filete::before, .filete::after { content: ''; width: clamp(36px, 5vw, 64px); height: 1.5px; background: linear-gradient(90deg, transparent, currentColor); }
+.filete::after { transform: scaleX(-1); }
+.filete .i { width: 20px; height: 20px; }
+.secao--marfim .filete, .secao--creme .filete { color: var(--dourado-escuro); }
+.titulo {
+  color: var(--cor-titulo);
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: clamp(34px, 2.4vw + 18px, 60px);
+  line-height: 1.02;
+  letter-spacing: .004em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.destaque { color: var(--cor-destaque); }
+.apoio { max-width: 40em; color: var(--cor-texto); font-size: clamp(15.5px, .25vw + 14.5px, 18px); line-height: 1.65; text-wrap: pretty; }
+.cab .apoio { margin-inline: auto; }
+.cab--esq .apoio { margin-inline: 0; }
+
+/* ---------------------------------------------------------------- botões
+   Pílula. Dourado com texto tinta (8:1); contorno marfim no escuro; contorno vermelho no
+   claro. Hover sobe 2 px e acende; o clique afunda (scale .97).                       */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font: 700 15.5px/1.15 var(--fonte-texto);
+  letter-spacing: .01em;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform .4s var(--ease-out), box-shadow .4s var(--ease-out), background-color .25s ease, border-color .25s ease, color .25s ease;
+}
+.btn .i { width: 20px; height: 20px; }
+.btn--p { min-height: 44px; padding: 0 18px; gap: 8px; font-size: 14px; }
+.btn--p .i { width: 18px; height: 18px; }
+.btn--dourado {
+  --cor-foco: var(--dourado-claro);
+  background: var(--dourado);
+  color: var(--tinta);
+  box-shadow: 0 12px 24px -14px rgb(34 5 10 / .55);
+}
+.btn--contorno { border-color: rgb(255 248 238 / .75); color: var(--marfim); background: rgb(42 6 12 / .28); }
+.btn--contorno-vermelho { border-color: var(--vermelho); color: var(--vermelho); background: transparent; }
+.btn:active { transform: scale(.97); transition-duration: .1s; }
+@media (hover: hover) {
+  .btn--dourado:hover { transform: translateY(-2px); background: #E4C072; box-shadow: 0 18px 30px -14px rgb(34 5 10 / .7); }
+  .btn--contorno:hover { border-color: var(--marfim); background: rgb(255 248 238 / .1); transform: translateY(-2px); }
+  .btn--contorno-vermelho:hover { background: var(--vermelho); color: var(--marfim); transform: translateY(-2px); }
+  .btn:active { transform: scale(.97); }
+}
+
+/* ---------------------------------------------------------------- estrelinha (brilho da logo) */
+.brilho { position: absolute; width: var(--t, 18px); height: var(--t, 18px); color: var(--dourado-claro); pointer-events: none; }
+.brilho .i { width: 100%; height: 100%; }
+
+/* ---------------------------------------------------------------- botão flutuante do WhatsApp
+   Verde escuro: o #25D366 com ícone branco dá 1,98:1 e reprova (memória do 081).      */
+.zap-flutuante {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #15803D;
+  color: var(--branco);
+  box-shadow: 0 16px 30px -12px rgb(0 0 0 / .5), 0 0 0 4px rgb(255 248 238 / .9);
+  transition: transform .5s var(--ease-out), opacity .4s ease;
+}
+.zap-flutuante .i { width: 32px; height: 32px; }
+.js .zap-flutuante:not(.visivel) { opacity: 0; transform: translateY(16px) scale(.7); pointer-events: none; }
+@media (hover: hover) {
+  .zap-flutuante:hover { transform: translateY(-3px) scale(1.06); }
+}
+
+/* ---------------------------------------------------------------- revelação no scroll
+   O padrão é visível. Só esconde com JS ligado e sem "reduzir movimento"; o _base.js marca
+   .visivel quando o elemento entra na tela. Parado, esconde SÓ com opacidade (clip-path
+   parado engana o IntersectionObserver, bug do 067). Keyframes com fill backwards: acabou a
+   entrada, o elemento volta ao estilo normal e o hover não fica preso.                */
+@keyframes sobe { from { opacity: 0; transform: translateY(28px); } }
+@keyframes sobe-gira { from { opacity: 0; transform: translateY(36px) rotate(var(--giro, -2deg)) scale(.96); } }
+@keyframes aparece { from { opacity: 0; } }
+@keyframes cresce { from { opacity: 0; transform: scale(.82); } }
+@keyframes da-esquerda { from { opacity: 0; transform: translateX(-36px); } }
+@keyframes da-direita { from { opacity: 0; transform: translateX(36px); } }
+@keyframes risca-x { from { transform: scaleX(0); } }
+@keyframes risca-y { from { transform: scaleY(0); } }
+@keyframes pisca { 0%, 100% { opacity: .25; transform: scale(.6) rotate(0deg); } 50% { opacity: 1; transform: scale(1) rotate(45deg); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-revela]:not(.visivel) { opacity: 0; }
+  .js [data-revela].visivel { animation: sobe .95s var(--ease-suave) calc(var(--i, 0) * 90ms) backwards; }
+  .js [data-revela-lista]:not(.visivel) > * { opacity: 0; }
+  .js [data-revela-lista].visivel > * { animation: sobe-gira .9s var(--ease-suave) calc(var(--i, 0) * 80ms) backwards; }
+  .js [data-revela="aparece"].visivel { animation: aparece 1s ease backwards; }
+  .js [data-revela="cresce"].visivel { animation: cresce 1s var(--ease-out) backwards; }
+  .js [data-revela="esquerda"].visivel { animation: da-esquerda 1s var(--ease-suave) backwards; }
+  .js [data-revela="direita"].visivel { animation: da-direita 1s var(--ease-suave) calc(var(--i, 0) * 90ms) backwards; }
+  .brilho { animation: pisca var(--dur, 3.2s) ease-in-out var(--atraso, 0s) infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "itens": [
+    {
+      "pergunta": "Como funciona a entrega dos presentes?",
+      "resposta": "Você separa os presentes e entrega pra equipe antes da chegada, cada um com o nome da criança. O Papai Noel chama um por um e entrega na frente da família."
+    },
+    {
+      "pergunta": "Vocês atendem na noite de 24?",
+      "resposta": "Sim. É a noite mais disputada do ano, e os horários dela são os primeiros a fechar. Manda a data e o horário que a gente confirma na hora se ainda tem vaga."
+    },
+    {
+      "pergunta": "Com quanta antecedência preciso reservar?",
+      "resposta": "Quanto antes, mais horário pra escolher. Dezembro enche primeiro, principalmente a véspera de Natal e os fins de semana. Pedido em cima da hora a gente atende quando tem equipe livre."
+    },
+    {
+      "pergunta": "O Papai Noel tem barba de verdade?",
+      "resposta": "Antes de fechar você recebe a foto real do Papai Noel que vai chegar e escolhe o que combina com a sua festa. Na proposta a gente conta como é o figurino e a barba de cada um."
+    },
+    {
+      "pergunta": "Quanto tempo dura a visita?",
+      "resposta": "Depende do número de crianças e do roteiro que você quer: só a entrega dos presentes, ou entrega com música, brincadeira e foto. O tempo vai escrito na proposta, junto com o valor."
+    },
+    {
+      "pergunta": "Meu filho tem medo de Papai Noel. E aí?",
+      "resposta": "É comum, principalmente com os pequenos. A equipe chega devagar, começa de longe e respeita o tempo da criança. Na maioria das vezes o medo vira abraço em poucos minutos."
+    },
+    {
+      "pergunta": "Atendem empresa e shopping durante o mês todo?",
+      "resposta": "Sim. Pra empresa, loja e shopping a agenda pode ser por dia ou pela temporada inteira de dezembro, com Papai Noel, Noeletes e duendes se revezando."
+    },
+    {
+      "pergunta": "Como funciona a reserva e o pagamento?",
+      "resposta": "Você recebe a proposta com o elenco, o tempo e o valor fechado. As condições de reserva e as formas de pagamento vão na mesma mensagem, e a data fica bloqueada na agenda quando a reserva é confirmada."
+    }
+  ]
+}

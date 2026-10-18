@@ -1,0 +1,802 @@
+{
+ "hero-fundo-960.avif": {
+  "w": 960,
+  "h": 450,
+  "kb": 14
+ },
+ "hero-fundo-960.webp": {
+  "w": 960,
+  "h": 450,
+  "kb": 34
+ },
+ "hero-fundo-1440.avif": {
+  "w": 1440,
+  "h": 675,
+  "kb": 25
+ },
+ "hero-fundo-1440.webp": {
+  "w": 1440,
+  "h": 675,
+  "kb": 58
+ },
+ "hero-fundo-1832.avif": {
+  "w": 1832,
+  "h": 859,
+  "kb": 35
+ },
+ "hero-fundo-1832.webp": {
+  "w": 1832,
+  "h": 859,
+  "kb": 78
+ },
+ "hero-fundo-cel-480.avif": {
+  "w": 480,
+  "h": 417,
+  "kb": 9
+ },
+ "hero-fundo-cel-480.webp": {
+  "w": 480,
+  "h": 417,
+  "kb": 23
+ },
+ "hero-fundo-cel-760.avif": {
+  "w": 760,
+  "h": 660,
+  "kb": 17
+ },
+ "hero-fundo-cel-760.webp": {
+  "w": 760,
+  "h": 660,
+  "kb": 43
+ },
+ "hero-fundo-cel-989.avif": {
+  "w": 989,
+  "h": 859,
+  "kb": 25
+ },
+ "hero-fundo-cel-989.webp": {
+  "w": 989,
+  "h": 859,
+  "kb": 59
+ },
+ "hero-noel-420.avif": {
+  "w": 420,
+  "h": 525,
+  "kb": 21
+ },
+ "hero-noel-420.webp": {
+  "w": 420,
+  "h": 525,
+  "kb": 55
+ },
+ "hero-noel-560.avif": {
+  "w": 560,
+  "h": 700,
+  "kb": 31
+ },
+ "hero-noel-560.webp": {
+  "w": 560,
+  "h": 700,
+  "kb": 84
+ },
+ "hero-noel-640.avif": {
+  "w": 640,
+  "h": 800,
+  "kb": 39
+ },
+ "hero-noel-640.webp": {
+  "w": 640,
+  "h": 800,
+  "kb": 104
+ },
+ "hero-noel-860.avif": {
+  "w": 860,
+  "h": 1075,
+  "kb": 62
+ },
+ "hero-noel-860.webp": {
+  "w": 860,
+  "h": 1075,
+  "kb": 179
+ },
+ "hero-noel-1122.avif": {
+  "w": 1122,
+  "h": 1402,
+  "kb": 87
+ },
+ "hero-noel-1122.webp": {
+  "w": 1122,
+  "h": 1402,
+  "kb": 260
+ },
+ "logo-300.avif": {
+  "w": 300,
+  "h": 128,
+  "kb": 17
+ },
+ "logo-300.webp": {
+  "w": 300,
+  "h": 128,
+  "kb": 24
+ },
+ "logo-460.avif": {
+  "w": 460,
+  "h": 196,
+  "kb": 28
+ },
+ "logo-460.webp": {
+  "w": 460,
+  "h": 196,
+  "kb": 41
+ },
+ "logo-640.avif": {
+  "w": 640,
+  "h": 272,
+  "kb": 40
+ },
+ "logo-640.webp": {
+  "w": 640,
+  "h": 272,
+  "kb": 60
+ },
+ "logo-920.avif": {
+  "w": 920,
+  "h": 391,
+  "kb": 59
+ },
+ "logo-920.webp": {
+  "w": 920,
+  "h": 391,
+  "kb": 91
+ },
+ "logo-topo-240.avif": {
+  "w": 240,
+  "h": 102,
+  "kb": 12
+ },
+ "logo-topo-240.webp": {
+  "w": 240,
+  "h": 102,
+  "kb": 16
+ },
+ "logo-topo-360.avif": {
+  "w": 360,
+  "h": 153,
+  "kb": 19
+ },
+ "logo-topo-360.webp": {
+  "w": 360,
+  "h": 153,
+  "kb": 27
+ },
+ "logo-topo-480.avif": {
+  "w": 480,
+  "h": 204,
+  "kb": 26
+ },
+ "logo-topo-480.webp": {
+  "w": 480,
+  "h": 204,
+  "kb": 39
+ },
+ "bola-listrada-120.avif": {
+  "w": 120,
+  "h": 181,
+  "kb": 7
+ },
+ "bola-listrada-120.webp": {
+  "w": 120,
+  "h": 181,
+  "kb": 9
+ },
+ "bola-listrada-130.avif": {
+  "w": 130,
+  "h": 196,
+  "kb": 2
+ },
+ "bola-listrada-130.webp": {
+  "w": 130,
+  "h": 196,
+  "kb": 3
+ },
+ "bola-lisa-78.avif": {
+  "w": 78,
+  "h": 115,
+  "kb": 1
+ },
+ "bola-lisa-78.webp": {
+  "w": 78,
+  "h": 115,
+  "kb": 1
+ },
+ "srv-visita-480.avif": {
+  "w": 480,
+  "h": 600,
+  "kb": 21
+ },
+ "srv-visita-480.webp": {
+  "w": 480,
+  "h": 600,
+  "kb": 29
+ },
+ "srv-visita-640.avif": {
+  "w": 640,
+  "h": 800,
+  "kb": 33
+ },
+ "srv-visita-640.webp": {
+  "w": 640,
+  "h": 800,
+  "kb": 45
+ },
+ "srv-visita-760.avif": {
+  "w": 760,
+  "h": 950,
+  "kb": 43
+ },
+ "srv-visita-760.webp": {
+  "w": 760,
+  "h": 950,
+  "kb": 57
+ },
+ "srv-visita-778.avif": {
+  "w": 778,
+  "h": 973,
+  "kb": 48
+ },
+ "srv-visita-778.webp": {
+  "w": 778,
+  "h": 973,
+  "kb": 62
+ },
+ "srv-condominio-400.avif": {
+  "w": 400,
+  "h": 305,
+  "kb": 10
+ },
+ "srv-condominio-400.webp": {
+  "w": 400,
+  "h": 305,
+  "kb": 14
+ },
+ "srv-condominio-560.avif": {
+  "w": 560,
+  "h": 428,
+  "kb": 15
+ },
+ "srv-condominio-560.webp": {
+  "w": 560,
+  "h": 428,
+  "kb": 22
+ },
+ "srv-condominio-719.avif": {
+  "w": 719,
+  "h": 549,
+  "kb": 21
+ },
+ "srv-condominio-719.webp": {
+  "w": 719,
+  "h": 549,
+  "kb": 30
+ },
+ "srv-empresa-400.avif": {
+  "w": 400,
+  "h": 300,
+  "kb": 12
+ },
+ "srv-empresa-400.webp": {
+  "w": 400,
+  "h": 300,
+  "kb": 19
+ },
+ "srv-empresa-560.avif": {
+  "w": 560,
+  "h": 420,
+  "kb": 20
+ },
+ "srv-empresa-560.webp": {
+  "w": 560,
+  "h": 420,
+  "kb": 33
+ },
+ "srv-empresa-720.avif": {
+  "w": 720,
+  "h": 540,
+  "kb": 31
+ },
+ "srv-empresa-720.webp": {
+  "w": 720,
+  "h": 540,
+  "kb": 48
+ },
+ "srv-empresa-1100.avif": {
+  "w": 1100,
+  "h": 825,
+  "kb": 60
+ },
+ "srv-empresa-1100.webp": {
+  "w": 1100,
+  "h": 825,
+  "kb": 88
+ },
+ "srv-shopping-400.avif": {
+  "w": 400,
+  "h": 399,
+  "kb": 23
+ },
+ "srv-shopping-400.webp": {
+  "w": 400,
+  "h": 399,
+  "kb": 37
+ },
+ "srv-shopping-560.avif": {
+  "w": 560,
+  "h": 559,
+  "kb": 38
+ },
+ "srv-shopping-560.webp": {
+  "w": 560,
+  "h": 559,
+  "kb": 61
+ },
+ "srv-shopping-720.avif": {
+  "w": 720,
+  "h": 719,
+  "kb": 56
+ },
+ "srv-shopping-720.webp": {
+  "w": 720,
+  "h": 719,
+  "kb": 87
+ },
+ "srv-escola-400.avif": {
+  "w": 400,
+  "h": 400,
+  "kb": 20
+ },
+ "srv-escola-400.webp": {
+  "w": 400,
+  "h": 400,
+  "kb": 35
+ },
+ "srv-escola-560.avif": {
+  "w": 560,
+  "h": 560,
+  "kb": 34
+ },
+ "srv-escola-560.webp": {
+  "w": 560,
+  "h": 560,
+  "kb": 59
+ },
+ "srv-escola-720.avif": {
+  "w": 720,
+  "h": 720,
+  "kb": 50
+ },
+ "srv-escola-720.webp": {
+  "w": 720,
+  "h": 720,
+  "kb": 83
+ },
+ "srv-escola-900.avif": {
+  "w": 900,
+  "h": 900,
+  "kb": 69
+ },
+ "srv-escola-900.webp": {
+  "w": 900,
+  "h": 900,
+  "kb": 113
+ },
+ "srv-espetaculo-480.avif": {
+  "w": 480,
+  "h": 360,
+  "kb": 16
+ },
+ "srv-espetaculo-480.webp": {
+  "w": 480,
+  "h": 360,
+  "kb": 26
+ },
+ "srv-espetaculo-760.avif": {
+  "w": 760,
+  "h": 570,
+  "kb": 35
+ },
+ "srv-espetaculo-760.webp": {
+  "w": 760,
+  "h": 570,
+  "kb": 54
+ },
+ "srv-espetaculo-1100.avif": {
+  "w": 1100,
+  "h": 825,
+  "kb": 63
+ },
+ "srv-espetaculo-1100.webp": {
+  "w": 1100,
+  "h": 825,
+  "kb": 92
+ },
+ "el-classico-360.avif": {
+  "w": 360,
+  "h": 480,
+  "kb": 7
+ },
+ "el-classico-360.webp": {
+  "w": 360,
+  "h": 480,
+  "kb": 8
+ },
+ "el-classico-469.avif": {
+  "w": 469,
+  "h": 625,
+  "kb": 10
+ },
+ "el-classico-469.webp": {
+  "w": 469,
+  "h": 625,
+  "kb": 12
+ },
+ "el-imperial-360.avif": {
+  "w": 360,
+  "h": 480,
+  "kb": 14
+ },
+ "el-imperial-360.webp": {
+  "w": 360,
+  "h": 480,
+  "kb": 21
+ },
+ "el-imperial-540.avif": {
+  "w": 540,
+  "h": 720,
+  "kb": 26
+ },
+ "el-imperial-540.webp": {
+  "w": 540,
+  "h": 720,
+  "kb": 36
+ },
+ "el-imperial-720.avif": {
+  "w": 720,
+  "h": 960,
+  "kb": 39
+ },
+ "el-imperial-720.webp": {
+  "w": 720,
+  "h": 960,
+  "kb": 54
+ },
+ "el-mamae-360.avif": {
+  "w": 360,
+  "h": 480,
+  "kb": 18
+ },
+ "el-mamae-360.webp": {
+  "w": 360,
+  "h": 480,
+  "kb": 30
+ },
+ "el-mamae-540.avif": {
+  "w": 540,
+  "h": 720,
+  "kb": 33
+ },
+ "el-mamae-540.webp": {
+  "w": 540,
+  "h": 720,
+  "kb": 52
+ },
+ "el-mamae-597.avif": {
+  "w": 597,
+  "h": 796,
+  "kb": 41
+ },
+ "el-mamae-597.webp": {
+  "w": 597,
+  "h": 796,
+  "kb": 62
+ },
+ "el-duendes-360.avif": {
+  "w": 360,
+  "h": 480,
+  "kb": 19
+ },
+ "el-duendes-360.webp": {
+  "w": 360,
+  "h": 480,
+  "kb": 31
+ },
+ "el-duendes-540.avif": {
+  "w": 540,
+  "h": 720,
+  "kb": 36
+ },
+ "el-duendes-540.webp": {
+  "w": 540,
+  "h": 720,
+  "kb": 58
+ },
+ "el-duendes-720.avif": {
+  "w": 720,
+  "h": 960,
+  "kb": 58
+ },
+ "el-duendes-720.webp": {
+  "w": 720,
+  "h": 960,
+  "kb": 93
+ },
+ "el-noeletes-360.avif": {
+  "w": 360,
+  "h": 480,
+  "kb": 27
+ },
+ "el-noeletes-360.webp": {
+  "w": 360,
+  "h": 480,
+  "kb": 44
+ },
+ "el-noeletes-531.avif": {
+  "w": 531,
+  "h": 708,
+  "kb": 47
+ },
+ "el-noeletes-531.webp": {
+  "w": 531,
+  "h": 708,
+  "kb": 77
+ },
+ "el-quebra-nozes-360.avif": {
+  "w": 360,
+  "h": 480,
+  "kb": 21
+ },
+ "el-quebra-nozes-360.webp": {
+  "w": 360,
+  "h": 480,
+  "kb": 34
+ },
+ "el-quebra-nozes-540.avif": {
+  "w": 540,
+  "h": 720,
+  "kb": 35
+ },
+ "el-quebra-nozes-540.webp": {
+  "w": 540,
+  "h": 720,
+  "kb": 54
+ },
+ "el-quebra-nozes-640.avif": {
+  "w": 640,
+  "h": 853,
+  "kb": 44
+ },
+ "el-quebra-nozes-640.webp": {
+  "w": 640,
+  "h": 853,
+  "kb": 66
+ },
+ "el-personagens-360.avif": {
+  "w": 360,
+  "h": 480,
+  "kb": 18
+ },
+ "el-personagens-360.webp": {
+  "w": 360,
+  "h": 480,
+  "kb": 32
+ },
+ "el-personagens-415.avif": {
+  "w": 415,
+  "h": 553,
+  "kb": 25
+ },
+ "el-personagens-415.webp": {
+  "w": 415,
+  "h": 553,
+  "kb": 42
+ },
+ "dif-figurino-480.avif": {
+  "w": 480,
+  "h": 600,
+  "kb": 21
+ },
+ "dif-figurino-480.webp": {
+  "w": 480,
+  "h": 600,
+  "kb": 31
+ },
+ "dif-figurino-720.avif": {
+  "w": 720,
+  "h": 900,
+  "kb": 37
+ },
+ "dif-figurino-720.webp": {
+  "w": 720,
+  "h": 900,
+  "kb": 53
+ },
+ "dif-figurino-960.avif": {
+  "w": 960,
+  "h": 1200,
+  "kb": 55
+ },
+ "dif-figurino-960.webp": {
+  "w": 960,
+  "h": 1200,
+  "kb": 76
+ },
+ "gal-violinista-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 7
+ },
+ "gal-violinista-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 9
+ },
+ "gal-violinista-480.avif": {
+  "w": 480,
+  "h": 640,
+  "kb": 15
+ },
+ "gal-violinista-480.webp": {
+  "w": 480,
+  "h": 640,
+  "kb": 18
+ },
+ "gal-mickey-400.avif": {
+  "w": 400,
+  "h": 300,
+  "kb": 17
+ },
+ "gal-mickey-400.webp": {
+  "w": 400,
+  "h": 300,
+  "kb": 28
+ },
+ "gal-mickey-640.avif": {
+  "w": 640,
+  "h": 480,
+  "kb": 36
+ },
+ "gal-mickey-640.webp": {
+  "w": 640,
+  "h": 480,
+  "kb": 59
+ },
+ "gal-noelete-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 11
+ },
+ "gal-noelete-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 17
+ },
+ "gal-noelete-480.avif": {
+  "w": 480,
+  "h": 640,
+  "kb": 23
+ },
+ "gal-noelete-480.webp": {
+  "w": 480,
+  "h": 640,
+  "kb": 37
+ },
+ "gal-imperial-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 11
+ },
+ "gal-imperial-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 16
+ },
+ "gal-imperial-480.avif": {
+  "w": 480,
+  "h": 640,
+  "kb": 22
+ },
+ "gal-imperial-480.webp": {
+  "w": 480,
+  "h": 640,
+  "kb": 31
+ },
+ "gal-duende-noel-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 14
+ },
+ "gal-duende-noel-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 23
+ },
+ "gal-duende-noel-480.avif": {
+  "w": 480,
+  "h": 640,
+  "kb": 32
+ },
+ "gal-duende-noel-480.webp": {
+  "w": 480,
+  "h": 640,
+  "kb": 53
+ },
+ "gal-bailarina-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 7
+ },
+ "gal-bailarina-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 9
+ },
+ "gal-soldadinho-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 6
+ },
+ "gal-soldadinho-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 7
+ },
+ "gal-noeletes-dupla-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 11
+ },
+ "gal-noeletes-dupla-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 17
+ },
+ "gal-noeletes-dupla-480.avif": {
+  "w": 480,
+  "h": 640,
+  "kb": 24
+ },
+ "gal-noeletes-dupla-480.webp": {
+  "w": 480,
+  "h": 640,
+  "kb": 35
+ },
+ "gal-sino-300.avif": {
+  "w": 300,
+  "h": 400,
+  "kb": 9
+ },
+ "gal-sino-300.webp": {
+  "w": 300,
+  "h": 400,
+  "kb": 13
+ },
+ "orc-imperial-420.avif": {
+  "w": 420,
+  "h": 315,
+  "kb": 12
+ },
+ "orc-imperial-420.webp": {
+  "w": 420,
+  "h": 315,
+  "kb": 16
+ },
+ "orc-imperial-640.avif": {
+  "w": 640,
+  "h": 480,
+  "kb": 22
+ },
+ "orc-imperial-640.webp": {
+  "w": 640,
+  "h": 480,
+  "kb": 28
+ }
+}

@@ -1,0 +1,201 @@
+/* ---------------------------------------------------------------- hero
+   A cortina de veludo (fundo gerado no chat do mockup) em tela cheia, neve caindo em duas
+   camadas, as bolas da logo penduradas no alto e o Papai Noel Imperial à direita, com o halo
+   da lanterna piscando como chama. Computador: texto à esquerda, Papai Noel encostado no pé
+   do hero (a faixa de provas sobe por cima dele). Celular: título, Papai Noel, subtítulo e
+   botões (regra da casa), com os filhos soltos no grid e as áreas trocadas.            */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  min-height: clamp(660px, 100svh, 940px);
+  display: grid;
+  background: var(--bordo-fundo);
+}
+.hero__fundo { position: absolute; inset: 0; z-index: -3; }
+.hero__fundo picture, .hero__fundo img { width: 100%; height: 100%; max-width: none; }
+.hero__fundo img { object-fit: cover; object-position: 62% 50%; }
+/* véu: escurece a esquerda (onde o texto pousa) e o pé, que encontra a faixa de provas */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgb(34 5 10 / .9) 0%, rgb(34 5 10 / .72) 30%, rgb(34 5 10 / .18) 58%, rgb(34 5 10 / 0) 72%),
+    linear-gradient(0deg, rgb(34 5 10 / .55) 0%, rgb(34 5 10 / 0) 26%);
+}
+
+/* neve: duas camadas de flocos (gradientes num ladrilho) descendo em loop. Só transform,
+   a camada é um quadro composto e não repinta. A camada sobe um ladrilho acima do hero e
+   anda exatamente um ladrilho por volta, então a emenda não aparece. */
+.neve { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.neve::before, .neve::after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  right: -40px;
+  top: calc(var(--l) * -1);
+  bottom: 0;
+  background-size: var(--l) var(--l);
+}
+.neve::before {
+  --l: 260px;
+  opacity: .75;
+  background-image:
+    radial-gradient(2.4px 2.4px at 20px 30px, #fff 50%, transparent 100%),
+    radial-gradient(1.6px 1.6px at 90px 150px, #fff 50%, transparent 100%),
+    radial-gradient(2px 2px at 170px 60px, #fff 50%, transparent 100%),
+    radial-gradient(1.4px 1.4px at 230px 210px, #fff 50%, transparent 100%),
+    radial-gradient(1.8px 1.8px at 130px 240px, #fff 50%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 60px 100px, #fff 50%, transparent 100%);
+}
+.neve::after {
+  --l: 420px;
+  opacity: .5;
+  filter: blur(.6px);
+  background-image:
+    radial-gradient(3.4px 3.4px at 60px 80px, #fff 50%, transparent 100%),
+    radial-gradient(2.6px 2.6px at 300px 40px, #fff 50%, transparent 100%),
+    radial-gradient(3px 3px at 210px 300px, #fff 50%, transparent 100%),
+    radial-gradient(2.2px 2.2px at 380px 190px, #fff 50%, transparent 100%);
+}
+@keyframes neve { to { transform: translate3d(var(--vento, 20px), var(--l), 0); } }
+@media (prefers-reduced-motion: no-preference) {
+  .neve::before { animation: neve 11s linear infinite; }
+  .neve::after { --vento: -30px; animation: neve 16s linear infinite; }
+}
+
+/* bolas da logo, penduradas do alto por um fio dourado, balançando devagar */
+.hero__bolas { position: absolute; top: var(--altura-topo); left: 0; right: 0; z-index: 1; height: 0; pointer-events: none; }
+.hero__bola { position: absolute; top: 0; display: grid; justify-items: center; transform-origin: 50% 0; }
+.hero__bola::before { content: ''; width: 1.5px; height: var(--fio); background: linear-gradient(180deg, rgb(217 178 92 / 0), rgb(217 178 92 / .9)); }
+.hero__bola picture { margin-top: -2px; }
+.hero__bola--listrada { --fio: 70px; left: 40.5%; width: 66px; }
+.hero__bola--lisa { --fio: 156px; left: 46.5%; width: 40px; }
+.hero__bola img { width: 100%; }
+picture[data-adiada] img { opacity: 0; transition: opacity .6s ease; }
+picture.adiada--pronta img { opacity: 1; }
+@keyframes balanca { from { transform: rotate(-3.2deg); } to { transform: rotate(3.2deg); } }
+@keyframes desce-bola { from { transform: translateY(-110%); } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero__bola { animation: balanca 3.6s var(--ease-in-out) infinite alternate; }
+  .hero__bola--lisa { animation-duration: 4.4s; animation-delay: -1.2s; }
+  .js .hero__bolas { animation: desce-bola 1.6s var(--ease-out) .5s backwards; }
+}
+
+/* grade: o Papai Noel ocupa a coluna da direita do topo ao pé; o texto fica centrado na
+   altura numa pilha de 3 linhas da grade */
+.hero__grade {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, .84fr);
+  grid-template-rows: 1fr auto auto auto 1.25fr;
+  grid-template-areas:
+    '. noel'
+    'titulo noel'
+    'sub noel'
+    'botoes noel'
+    '. noel';
+  column-gap: 24px;
+  padding-top: calc(var(--altura-topo) + 24px);
+}
+.hero__titulo {
+  grid-area: titulo;
+  color: var(--marfim);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(44px, 2.6vw + 24px, 66px);
+  line-height: .96;
+  letter-spacing: .002em;
+  text-transform: uppercase;
+  text-shadow: 0 4px 30px rgb(34 5 10 / .55);
+}
+.hero__linha { display: block; }
+@media (min-width: 64em) {
+  .hero__linha { white-space: nowrap; }
+}
+.hero__linha.destaque { color: var(--dourado); }
+.hero__sub { grid-area: sub; max-width: 33em; margin-top: 24px; color: rgb(255 248 238 / .9); font-size: clamp(16px, .35vw + 14.6px, 19px); font-weight: 500; line-height: 1.6; text-wrap: pretty; }
+.hero__botoes { grid-area: botoes; display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+.hero__brilho-t { left: -26px; top: calc(var(--altura-topo) + 22%); }
+
+.hero__noel { position: relative; grid-area: noel; align-self: end; justify-self: end; width: min(44vw, 660px); margin-right: calc(var(--margem) * -.35); }
+.hero__noel picture { position: relative; z-index: 1; }
+.hero__noel img {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(180deg, #000 74%, transparent 99%), linear-gradient(270deg, transparent 0%, #000 10%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(180deg, #000 74%, transparent 99%), linear-gradient(270deg, transparent 0%, #000 10%);
+  mask-composite: intersect;
+}
+/* halo da lanterna: a lanterna fica a 25% da largura e 42% da altura da foto */
+.hero__luz {
+  position: absolute;
+  left: 25%;
+  top: 41%;
+  z-index: 0;
+  width: 92%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(255 205 120 / .62), rgb(255 170 80 / .26) 45%, rgb(255 150 60 / 0) 100%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.hero__noel .brilho { z-index: 2; }
+
+/* o Papai Noel é o LCP: entra subindo, mas visível desde o primeiro quadro (imagem com
+   opacidade zero não conta como pintada e o LCP esperava a animação) */
+@keyframes noel-chega { from { transform: translateY(46px) scale(.97); } }
+@keyframes linha-sobe { from { opacity: 0; transform: translateY(42%); } }
+@keyframes acende { from { opacity: 0; transform: translate(-50%, -50%) scale(.6); } }
+@keyframes chama {
+  0%, 100% { opacity: 1; }
+  18% { opacity: .82; }
+  36% { opacity: .96; }
+  52% { opacity: .78; }
+  70% { opacity: .93; }
+  86% { opacity: .85; }
+}
+@keyframes fundo-assenta { from { transform: scale(1.07); } }
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero__fundo img { animation: fundo-assenta 2.6s var(--ease-out) backwards; }
+  .js .hero__linha { animation: linha-sobe .95s var(--ease-out) calc(.12s + var(--i) * .11s) backwards; }
+  .js .hero__noel picture { animation: noel-chega 1.25s var(--ease-out) .22s backwards; }
+  .js .hero__luz { animation: acende 1.4s var(--ease-out) .9s backwards, chama 3.4s ease-in-out 2.3s infinite; }
+  .js .hero__sub { animation: sobe .9s var(--ease-out) .5s backwards; }
+  .js .hero__botoes { animation: sobe .9s var(--ease-out) .62s backwards; }
+}
+
+/* tablet e celular: uma coluna, na ordem da casa */
+@media (max-width: 63.99em) {
+  .hero { min-height: 0; }
+  .hero__fundo img { object-position: 50% 30%; }
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgb(34 5 10 / .78) 0%, rgb(34 5 10 / .45) 26%, rgb(34 5 10 / .25) 50%, rgb(34 5 10 / .82) 74%, rgb(34 5 10 / .95) 100%);
+  }
+  .hero__grade {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: 'titulo' 'noel' 'sub' 'botoes';
+    padding-top: calc(var(--altura-topo) + 30px);
+    padding-bottom: 112px;
+    text-align: center;
+  }
+  .hero__titulo { font-size: min(10.6vw, 64px); line-height: .98; }
+  .hero__noel { justify-self: center; width: min(78vw, 420px); margin: 10px 0 -30px; }
+  .hero__noel img {
+    -webkit-mask-image: linear-gradient(180deg, #000 66%, transparent 97%), linear-gradient(270deg, transparent 0%, #000 14%);
+    mask-image: linear-gradient(180deg, #000 66%, transparent 97%), linear-gradient(270deg, transparent 0%, #000 14%);
+  }
+  .hero__sub { margin: 0 auto; }
+  .hero__botoes { justify-content: center; margin-top: 26px; }
+  .hero__brilho-t { left: 4%; top: calc(var(--altura-topo) + 10px); }
+  .hero__bola--listrada { --fio: 10px; left: auto; right: 6%; width: 46px; }
+  .hero__bola--lisa { --fio: 56px; left: auto; right: 17%; width: 28px; }
+}
+@media (max-width: 39.99em) {
+  .hero__bolas { display: none; }
+  .hero__botoes .btn { flex: 1 1 100%; }
+  .hero__sub { font-size: 15.5px; }
+}

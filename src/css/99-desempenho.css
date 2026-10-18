@@ -1,0 +1,61 @@
+/* ---------------------------------------------------------------- desempenho (base do 076 ao 080)
+   content-visibility: o navegador só faz layout e pintura de cada seção abaixo do hero
+   quando ela chega perto da tela. Sem isso, o celular gastava 1,5 s de estilo e layout
+   (CPU 4x) com a página inteira no carregamento.
+
+   A altura reservada é a do CONTEÚDO: o navegador soma o padding da seção por cima (bug do
+   076). Os números saem do scripts/alturas.mjs (1440, 1100, 800 e 390), medidos em
+   2026-10-17. Estimativa errada faz a âncora mirar longe; o _base.js desenha tudo no
+   primeiro clique e confere no fim da rolagem. Mudou muito o tamanho de uma seção? Rodar o
+   alturas.mjs e atualizar aqui.                                                         */
+.servicos, .elenco, .encanto, .passos, .galeria, .depoimentos, .faq, .orc, .rodape { content-visibility: auto; }
+/* celular: no primeiro quadro a seção logo abaixo do hero fica pulada de vez (o script do
+   <head> tira a classe na primeira pintura, memória do 079) */
+@media (max-width: 63.99em) {
+  .js-abrindo .servicos { content-visibility: hidden; }
+}
+/* no primeiro clique numa âncora (_base.js) tudo é desenhado de uma vez */
+.cv-pronto :is(.servicos, .elenco, .encanto, .passos, .galeria, .depoimentos, .faq, .orc, .rodape) { content-visibility: visible; }
+
+.servicos { contain-intrinsic-size: auto 1481px; }
+.elenco { contain-intrinsic-size: auto 1529px; }
+.encanto { contain-intrinsic-size: auto 596px; }
+.passos { contain-intrinsic-size: auto 304px; }
+.galeria { contain-intrinsic-size: auto 658px; }
+.depoimentos { contain-intrinsic-size: auto 590px; }
+.faq { contain-intrinsic-size: auto 510px; }
+.orc { contain-intrinsic-size: auto 922px; }
+.rodape { contain-intrinsic-size: auto 386px; }
+@media (max-width: 79.99em) {
+  .servicos { contain-intrinsic-size: auto 1392px; }
+  .elenco { contain-intrinsic-size: auto 1423px; }
+  .encanto { contain-intrinsic-size: auto 657px; }
+  .passos { contain-intrinsic-size: auto 307px; }
+  .galeria { contain-intrinsic-size: auto 562px; }
+  .depoimentos { contain-intrinsic-size: auto 633px; }
+  .faq { contain-intrinsic-size: auto 490px; }
+  .orc { contain-intrinsic-size: auto 970px; }
+  .rodape { contain-intrinsic-size: auto 432px; }
+}
+@media (max-width: 63.99em) {
+  .servicos { contain-intrinsic-size: auto 1446px; }
+  .elenco { contain-intrinsic-size: auto 934px; }
+  .encanto { contain-intrinsic-size: auto 922px; }
+  .passos { contain-intrinsic-size: auto 441px; }
+  .galeria { contain-intrinsic-size: auto 541px; }
+  .depoimentos { contain-intrinsic-size: auto 771px; }
+  .faq { contain-intrinsic-size: auto 769px; }
+  .orc { contain-intrinsic-size: auto 1331px; }
+  .rodape { contain-intrinsic-size: auto 818px; }
+}
+@media (max-width: 39.99em) {
+  .servicos { contain-intrinsic-size: auto 2617px; }
+  .elenco { contain-intrinsic-size: auto 964px; }
+  .encanto { contain-intrinsic-size: auto 1122px; }
+  .passos { contain-intrinsic-size: auto 552px; }
+  .galeria { contain-intrinsic-size: auto 593px; }
+  .depoimentos { contain-intrinsic-size: auto 1337px; }
+  .faq { contain-intrinsic-size: auto 953px; }
+  .orc { contain-intrinsic-size: auto 1734px; }
+  .rodape { contain-intrinsic-size: auto 1153px; }
+}

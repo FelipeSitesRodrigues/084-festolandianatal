@@ -1,0 +1,50 @@
+/* ---------------------------------------------------------------- faixa de provas
+   Cartão marfim que sobe por cima do pé do hero (o Papai Noel passa por trás dele), com as
+   quatro provas separadas por um fio dourado. Celular: grade 2 x 2.                   */
+.provas { position: relative; z-index: 2; margin-top: -78px; background: linear-gradient(180deg, transparent 78px, var(--creme) 78px); }
+.provas__lista {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 26px 12px;
+  border: 1px solid rgb(217 178 92 / .45);
+  border-radius: var(--raio);
+  background: var(--marfim);
+  box-shadow: 0 30px 60px -34px rgb(42 6 12 / .55), 0 2px 0 rgb(255 255 255 / .8) inset;
+}
+.prova { display: flex; align-items: center; gap: 14px; padding: 6px 22px; }
+.prova + .prova { border-left: 1px solid var(--fio); }
+.prova__icone {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #FFF1D6, #F6E0B5);
+  color: var(--vermelho);
+}
+.prova__icone .i { width: 28px; height: 28px; }
+.prova p { display: grid; gap: 2px; }
+.prova__num { color: var(--bordo); font: 400 clamp(20px, .55vw + 13px, 25px)/1.05 var(--fonte-titulo); white-space: nowrap; text-transform: uppercase; letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+.prova__rot { color: var(--texto); font-size: 13.5px; font-weight: 500; line-height: 1.35; }
+@media (max-width: 63.99em) {
+  .provas { margin-top: -64px; background: linear-gradient(180deg, transparent 64px, var(--creme) 64px); }
+  .provas__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 10px; padding: 16px 6px; }
+  .prova { padding: 10px 14px; }
+  .prova:nth-child(3) { border-left: 0; }
+  .prova:nth-child(n + 3) { border-top: 1px solid var(--fio); padding-top: 18px; }
+}
+@media (max-width: 39.99em) {
+  .prova { flex-direction: column; align-items: flex-start; gap: 10px; padding: 10px 12px; }
+  .prova__icone { width: 44px; height: 44px; }
+  .prova__icone .i { width: 24px; height: 24px; }
+  .prova__num { font-size: 19px; white-space: normal; }
+  .prova__rot { font-size: 12.5px; }
+}
+
+/* a faixa fica no pé da primeira tela: entra no carregamento, logo depois do hero (pela
+   revelação no scroll ela ficaria vazia, rente à borda de baixo, até a pessoa rolar) */
+@media (prefers-reduced-motion: no-preference) {
+  .js .provas__lista { animation: sobe 1s var(--ease-out) .7s backwards; }
+  .js .prova { animation: aparece .8s ease calc(.9s + var(--i) * .1s) backwards; }
+}
