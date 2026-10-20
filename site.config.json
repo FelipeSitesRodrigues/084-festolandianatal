@@ -5,7 +5,12 @@
   "dominio": "",
   "whatsapp": "5511965358929",
   "whatsappTexto": "(11) 96535-8929",
-  "telefones": ["(11) 99993-2583", "(11) 96671-4197", "(11) 2365-5475"],
+  "whatsappsExtras": [
+    { "numero": "5511999932583", "texto": "(11) 99993-2583" },
+    { "numero": "5511966714197", "texto": "(11) 96671-4197" }
+  ],
+  "fixo": "551131512621",
+  "fixoTexto": "(11) 3151-2621",
   "email": "showsfestolandia@gmail.com",
   "endereco": "Rua Augusta, 101, Consolação",
   "cidade": "São Paulo",

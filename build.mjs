@@ -15,6 +15,7 @@
  * - JS: mesma regra, em src/js, num <script> no fim do <body>. Cada arquivo é um IIFE.
  * - Dados em src/dados/*.json viram HTML no build (sai tudo no HTML, pro Google ler):
  *   <!-- @servicos -->, <!-- @elenco -->, <!-- @galeria -->, <!-- @depoimentos --> e <!-- @faq -->.
+ *   <!-- @whatsapps --> vira os links dos três WhatsApps da casa (rodapé).
  * - {{wa:chave}} vira o link do WhatsApp com a mensagem mensagens.chave do config.
  *   {{cfg.caminho}} puxa qualquer valor do config; {{ano}} é o ano atual.
  * - <i data-i="nome" data-w="light" class="..."></i> vira <svg><use> apontando pro sprite
@@ -162,7 +163,9 @@ function valor(caminho) {
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-const wa = (msg) => `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(msg)}`
+const wa = (msg, numero = cfg.whatsapp) => `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`
+// os três WhatsApps da casa, o principal primeiro (ordem que a Sabrina mandou em 2026-10-20)
+const whatsapps = [{ numero: cfg.whatsapp, texto: cfg.whatsappTexto }, ...(cfg.whatsappsExtras || [])]
 function linkWa(chave) {
   const msg = cfg.mensagens[chave]
   if (!msg) avisos.push(`mensagem de WhatsApp sem chave no config: ${chave}`)
@@ -325,6 +328,9 @@ const htmlDepoimentos = () =>
 // Botão de verdade com aria-expanded e aria-controls; a resposta abre pela grade (0fr -> 1fr).
 // A primeira começa aberta. Sem JS, todas abertas. Duas colunas fixas (a primeira metade e a
 // segunda): em CSS columns, abrir uma pergunta jogaria as outras pra coluna do lado.
+const htmlWhatsapps = () =>
+  whatsapps.map((w, i) => `<a href="${esc(wa(cfg.mensagens.geral, w.numero))}" data-zap="rodape${i ? '-' + (i + 1) : ''}">${esc(w.texto)}</a>`).join('')
+
 const htmlFaq = () => {
   const meio = Math.ceil(faq.length / 2)
   return [faq.slice(0, meio), faq.slice(meio)].map((parte, c) => `<div class="faq__coluna" style="--i:${c}">${parte.map((q, k) => itemFaq(q, c * meio + k)).join('')}
@@ -356,6 +362,10 @@ function schema() {
     logo: url('/icon-512.png'),
     telephone: `+${cfg.whatsapp}`,
     email: cfg.email,
+    contactPoint: [
+      ...whatsapps.map((w) => ({ '@type': 'ContactPoint', name: 'WhatsApp', telephone: `+${w.numero}`, contactType: 'reservations', areaServed: 'BR', availableLanguage: 'Portuguese' })),
+      { '@type': 'ContactPoint', name: 'Escritório', telephone: `+${cfg.fixo}`, contactType: 'customer service', areaServed: 'BR', availableLanguage: 'Portuguese' },
+    ],
     address: { '@type': 'PostalAddress', streetAddress: cfg.endereco, addressLocality: cfg.cidade, addressRegion: cfg.uf, addressCountry: 'BR' },
     areaServed: [{ '@type': 'City', name: 'São Paulo' }, { '@type': 'AdministrativeArea', name: 'Grande São Paulo' }],
     openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '20:00' }],
@@ -399,6 +409,7 @@ function montar(secoes, preview = false) {
     .replace('<!-- @galeria -->', htmlGaleria)
     .replace('<!-- @depoimentos -->', htmlDepoimentos)
     .replace('<!-- @faq -->', htmlFaq)
+    .replace('<!-- @whatsapps -->', htmlWhatsapps)
   html = html.replace('<!-- @js -->', () => `<script>${minJs(juntar('src/js', '.js', nomes))}</script>`)
   html = html.replace('<!-- @css -->', () => `<style>${minCss(juntar('src/css', '.css', nomes))}</style>`)
   html = html.replace(/<i data-i="([\w-]+)"(?: data-w="(\w+)")?(?: class="([^"]*)")?><\/i>/g, (_, nome, peso, classe) => icone(nome, peso || 'light', classe || ''))

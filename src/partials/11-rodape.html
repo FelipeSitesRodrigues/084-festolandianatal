@@ -18,7 +18,8 @@
       <div class="rodape__col">
         <h2 class="rodape__titulo">Contato</h2>
         <ul role="list" class="rodape__contato">
-          <li><i data-i="whatsapp-logo" data-w="regular"></i><a href="{{wa:geral}}" data-zap="rodape">{{cfg.whatsappTexto}}</a></li>
+          <li><i data-i="whatsapp-logo" data-w="regular"></i><span class="rodape__fones"><!-- @whatsapps --></span></li>
+          <li><i data-i="phone" data-w="regular"></i><span class="rodape__fones"><a href="tel:+{{cfg.fixo}}">{{cfg.fixoTexto}}</a><small>Fixo do escritório</small></span></li>
           <li><i data-i="envelope-simple" data-w="regular"></i><a href="mailto:{{cfg.email}}">{{cfg.email}}</a></li>
           <li><i data-i="map-pin" data-w="regular"></i><span>{{cfg.endereco}}<br>{{cfg.cidade}}, {{cfg.uf}}</span></li>
           <li><i data-i="clock" data-w="regular"></i><span>{{cfg.horario}}</span></li>

@@ -25,7 +25,7 @@
 .depoimentos { contain-intrinsic-size: auto 590px; }
 .faq { contain-intrinsic-size: auto 510px; }
 .orc { contain-intrinsic-size: auto 922px; }
-.rodape { contain-intrinsic-size: auto 386px; }
+.rodape { contain-intrinsic-size: auto 431px; }
 @media (max-width: 79.99em) {
   .servicos { contain-intrinsic-size: auto 1392px; }
   .elenco { contain-intrinsic-size: auto 1423px; }
@@ -46,7 +46,7 @@
   .depoimentos { contain-intrinsic-size: auto 771px; }
   .faq { contain-intrinsic-size: auto 769px; }
   .orc { contain-intrinsic-size: auto 1331px; }
-  .rodape { contain-intrinsic-size: auto 818px; }
+  .rodape { contain-intrinsic-size: auto 860px; }
 }
 @media (max-width: 39.99em) {
   .servicos { contain-intrinsic-size: auto 2617px; }
@@ -57,5 +57,5 @@
   .depoimentos { contain-intrinsic-size: auto 1337px; }
   .faq { contain-intrinsic-size: auto 953px; }
   .orc { contain-intrinsic-size: auto 1734px; }
-  .rodape { contain-intrinsic-size: auto 1153px; }
+  .rodape { contain-intrinsic-size: auto 1265px; }
 }

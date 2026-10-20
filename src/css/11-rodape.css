@@ -19,6 +19,9 @@
 .rodape__contato li > span { padding-top: 4px; }
 .rodape__contato .i { width: 20px; height: 20px; margin-top: 6px; color: var(--dourado); }
 .rodape__contato a { padding-top: 4px; }
+/* os três WhatsApps um embaixo do outro, e o fixo com a legenda embaixo */
+.rodape__contato li > .rodape__fones { display: grid; justify-items: start; padding-top: 0; }
+.rodape__fones small { color: rgb(255 248 238 / .66); font-size: 13px; line-height: 1.3; }
 .rodape__insta { display: inline-flex !important; align-items: center; gap: 10px; color: var(--marfim) !important; font-weight: 700; }
 .rodape__insta .i { width: 24px; height: 24px; color: var(--dourado); }
 .rodape__nota { margin-top: 12px; font-size: 13.5px; line-height: 1.55; }
